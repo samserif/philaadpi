@@ -1,0 +1,16 @@
+ //Reset and variables
+@import "_reset";
+@import "_vars";
+@import "_delete";
+//Base styles for all devices
+@import "_base";
+//Styles for landscape phone
+@import "_480up";
+//Styles for tablet portrait
+@import "_768up";
+//Styles for tablet landscape
+@import "_1024up";
+//Styles for computer screens
+@import "_1280up";
+//Styles for very large computer screens
+@import "_1600up";

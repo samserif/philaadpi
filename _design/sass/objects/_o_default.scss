@@ -1,0 +1,45 @@
+/****
+ *Box Sizing
+ */
+
+
+@mixin box_sizing($area) {
+	box-sizing: #{$area}-box;
+	-moz-box-sizing: #{$area}-box;
+}
+
+/****
+ *Alignments
+ */
+
+
+@mixin align($direction) {
+	text-align: $direction;
+
+	* {
+		text-align: $direction;
+	}
+}
+
+/****
+ *Margins
+ */
+
+
+%margin_auto {
+ 	margin-left: auto;
+ 	margin-right: auto;
+}
+
+/****
+ *Transitions
+ */
+ 
+
+@mixin transition($time, $type: all) {
+	-webkit-transition: $type $time ease-in-out;
+	-moz-transition: $type $time ease-in-out;
+	-ms-transition: $type $time ease-in-out;
+	-o-transition: $type $time ease-in-out;
+	 transition: $type $time ease-in-out;
+}
