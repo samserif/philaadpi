@@ -4,3 +4,27 @@
 
 
 @import "_o_default";
+
+@mixin blue_header ($size: 2em) {
+	font: $headertext;
+	color: $azure;
+	font-size: $size;
+}
+
+@mixin white_header ($size: 2em) {
+	font: $headertext;
+	color: $white;
+	font-size: $size;
+}
+
+@mixin black_body ($size: 2em) {
+	font: $bodytext;
+	color: $black;
+	font-size: $size;
+}
+
+@mixin white_body ($size: 2em) {
+	font: $bodytext;
+	color: $white;
+	font-size: $size;
+}

@@ -12,183 +12,188 @@
 * {
 	-webkit-font-smoothing: antialiased;
 }
+
+
 body{
 	width: 100%;
-	font-size: 10px;
+	font-size: 100%;
 }
+
 /*********
 * Header
 *******/
-#bgimg {
-	width: 100%;
-	height: 350px;
-}
-#foregroundwrap {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	left: 0px;
-
 	header {
 		width: 100%;
+		#logo-wrap {
+			background-color: $azure;
 
-		.logo {
-			margin: 15px 0px 5px 10px;
-			width: 80%;
-			height: 80%;
-		}
+			#logo {
+				margin: 15px 0px 5px 10px;
+				width: 80%;
+				height: 80%;
+			}
 
-		.hamburger {
-			display: inline-block;
-			width: 25px;
-			height: 20px;
-			position: absolute;
-			top: 20px;
-			right: 15px;
+			#hamburger {
+				display: inline-block;
+				width: 25px;
+				height: 20px;
+				position: absolute;
+				top: 20px;
+				right: 15px;
 
 
-			&>div{
-				background-color: $hamburgercolor;
-				height: 20%;
-				width: 100%;
+				&>div{
+					background-color: $hamburgercolor;
+					height: 20%;
+					width: 100%;
 
-				&:not(:first-child) {
-					margin-top: 20%;
+					&:not(:first-child) {
+						margin-top: 20%;
+					}
 				}
 			}
-		}
 
-		.mainnav {
+		}
+		#mainnav {
 			background-color: $white;
 			text-align: center;
-			padding: 5px;
-			margin-top: 0px;
 
-			a {
-				color: $azure;
-				font-size: 1.6em;
+			& > ul {
+				@include transition(.9, max-height);
+				height: auto;
+				max-height: 0px;
+				overflow-y: hidden;
+
+				&.active {
+					max-height: 500px;
+				}
+			}
+
+			li{
+				&:first-child {
+					margin-top: 15px;
+				}
+
+				&:last-child{
+					margin-bottom: 15px;
+				}
+			}
+
+			a, a:visited, a:active, a:link {
+				@include blue_header(1.6em);
 				font-style: italic;
 				font: $italictext;
-				line-height: 20px; 
+				line-height: 45px; 
 				text-decoration: none;
-				
+			
 				&:hover {
 					color: $azure;
 				}
 			}
-			
 		}
-
-		h1 {
-			color: $white;
-			font-size: 2.7em;
-			font: $headertext;
-			text-align: center
-		}
-
-		p{
-			color: $white;
-			font-size: 1.4em;
-			font: $bodytext;
-			text-align: center
-
-		}
-
-		.joinbutton{
-			background: url(../img/circle.png) center center no-repeat;
-			height: 100px;
-			margin: 20px auto;
-			width: 100px;
-
-			h2 {
-				color: $azure;
-				font-size: 2em;
-				line-height: 20px;
-				padding: 20px 20px 20px 15px;
-				text-align: center;
-			}
- 		}
-
- 		.shadow {
-			  -webkit-box-shadow: 0px 0px 5px 0px $black; 
-			  -moz-box-shadow:    0px 0px 5px 0px $black; 
-			  box-shadow:         0px 0px 5px 0px $black; 
-			}
 	}
 
 /*********
 * Middle
 *******/
-	main {
+	#main {
 		width: 100%;
-		padding: 15px;
+		position: relative;
 
-		h2 {
-			font: $headertext;
-			font-size: 2.7em;
-			color: $azure;
+		#main-text {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			
+			p{
+				@include white_body(1em);
+				margin: 0px auto;
+				text-align: center;
+				line-height: 1.1em;
+				padding: 0px 5px;
+			}
+
+			h1 {
+				@include white_header (2em);
+				text-align: center;
+				margin: 25px auto;
+				padding-top: 20px;
+			}
+		}
+		#inner-main{
+			width: 100%;
+			overflow-x: hidden;
+
+			img {
+				width: auto;
+				height: 300px;
+				margin-left: -100px;
+			}
+
+
+			.joinbutton{
+				height: 150px;
+				background: url(../img/circle.png) center center no-repeat;
+				background-size: 120px 120px;
+				margin-top: -60px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 0px;
+				position: relative;
+
+				h2 {
+					@include blue_header(1.4em);
+					line-height: 20px;
+					text-align: center;
+					padding: 5px;
+					width: 120px;
+					height: 120px;
+					margin: 0px auto;
+				}
+	 		}
+				
 		}
 
 		.perksection {
-			height: 300px;
-			margin: 0px auto;
-
-				h2{
-					color: $azure;
-					font: $headertext;
-					font-size: 2em;
-					line-height: 20px;
-					margin: 60px 0px 0px 0px;
-					text-align: center;
-				}
-
-				p{
-					color: $black;
-					font: $bodytext;
-					font-size: 1.4em;
-					line-height: 16px;
-					text-align: center;	
-				}
-
+			height: auto;
+			margin-top: 50px
 				img {
 					margin: 0px auto;
 				}
 
-				.perk1 {
-					height: 33%; 
-					background: url(../img/icon_cal.png) top center no-repeat;
+				h2{
+					@include blue_header(2em);
+					line-height: 20px;
+					text-align: center;
+					margin-bottom: 15px;
 				}
 
-				.perk2 {
-					height: 33%;
-					background: url(../img/icon_cal.png) top center no-repeat;
+				p{
+					@include black_body(1.4em);
+					line-height: 16px;
+					text-align: center;	
 				}
 
-				.perk3 {
-					height: 33%;
-					background: url(../img/icon_cal.png) top center no-repeat;
-				}
+				
 		}
 		
 		article{
 			width: 100%;
-			padding-left: 50px;
+			.date {
+				margin: 0px auto;
+				width: 150px;
+			}
 
 			h3 {
-				font: $headertext;
-				font-size: 1.5em;
-				color: $azure; 
+				@include blue_header(1.5em);
+				margin: 10px 0px;
 			}
 
 			p{
-				color: $black;
-				font: $bodytext;
-				font-size: 1em;
+				@include black_body(1em);
 				line-height: 18px;
-			}
-
-			post {
-				background: url(../img/circleblue.png) left center no-repeat;
+				max-width: 300px;
 			}
 		}
 
@@ -229,7 +234,6 @@ body{
 		bottom: 0px;
 		height: 100px;
 		margin: 0px auto;
-		position: absolute;
 		text-align: center;
 		width: 100%;
 	
@@ -267,4 +271,3 @@ body{
 	}
 
 
-}

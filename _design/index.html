@@ -4,18 +4,27 @@
 	<meta charset="UTF-8">
 	<title>Philadelphia ADPI Alumnae Association</title>
 	<link href="/css/style.css" rel="stylesheet">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="/js/script.js"></script>
+
 </head>
 <body>
-	<img id="bgimg" src="/img/herobg.png" alt="philly skyline picture">
-	<div id="foregroundwrap">
+	<div id="wrapper"> 
+<!--***********
+Header Section starts here
+*********-->
 		<header>
-			<a href="index.html"><img class="logo" src="/img/logo.png" alt="GPAA logo"/></a>
-			<div class="hamburger">
-				<div></div>
-				<div></div>
-				<div></div>
+			<div id="inner-header">
+				<div id="logo-wrap">
+					<a href="index.html"><img id="logo" src="/img/logo.png" alt="GPAA logo"/></a>
+					<div id="hamburger">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
 			</div>
-			<nav class="mainnav">		
+			<nav id="mainnav">		
 				<ul>
 					<li><a href=""><strong>// About GPAA</strong></a></li>
 					<li><a href=""><strong>// Get Involved</strong></a></li>
@@ -23,47 +32,64 @@
 					<li><a href=""><strong>// Contact Us</strong></a></li>
 				</ul>
 			</nav>
-			<h1>Welcome to GPAA</h1>
-			<p>This is an alumnae association in philly.</p>
-			<div class="joinbutton">
-				<h2>Become a Member</h2>
-			</div>
 		</header>
-		<main>
+<!--***********
+Main Section starts here
+*********-->
+		<div id="main">
+			<section id="main-text">
+				<h1>Welcome to GPAA</h1>
+				<p>The Greater Philadelphia Alumnae Association is home to Pi sisters from Berks, Chester, Delaware, Lancaster, Montgomery and Philadelphia Counties. Pi sisters from all over the country have come home to the GPAA!</p>
+			</section>
+			<div id="inner-main">
+				<img src="/img/herobg.png" alt="philly skyline">
+				<div class="joinbutton">
+					<h2>Become a Member</h2>
+				</div>
+			</div>
 			<section class="perksection">	
 				<div class="perk1">
+					<img src="/img/icon_cal.png" alt="icon">
 					<h2>perk1</h2>
 					<p>this is a perk</p>
 				</div>
 				<div class="perk2">
+					<img src="/img/icon_cal.png" alt="icon">
 					<h2>perk1</h2>
 					<p>this is a perk</p>
 				</div>
 				<div class="perk3">
+					<img src="/img/icon_cal.png" alt="icon">
 					<h2>perk1</h2>
 					<p>this is a perk</p>
 				</div>
 			</section>
 			<h2>Upcoming Events</h2>
 			<article class="post">
-				<div class="date"></div>
+				<div class="date">
+					<img src="/img/circleblue.png" alt="icon">
+				</div>
 				<h3>ppost1</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, saepe, eveniet id repellat voluptate enim deserunt excepturi alias similique asperiores repellendus cumque accusamus veritatis ab reprehenderit nihil dicta minima sed. this is the next event coming up in Philly</p>
 				<span class="more"><a href="">Read More</a></span>
 			</article>
 			<article class="post">
-				<div class="date"></div>
+				<div class="date">
+					<img src="/img/circleblue.png" alt="icon">
+				</div>
 				<h3>ppost1</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, laborum, dolor minus a maiores magni ipsam modi accusantium ea quae veritatis culpa asperiores illum enim voluptates aliquid dignissimos? Ea, fugiat. this is the next event coming up in Philly</p>
 				<span class="more"><a href="">Read More</a></span>
 			</article>
 			<article class="post">
-				<div class="date"></div>
+				<div class="date">
+					<img src="/img/circleblue.png" alt="icon">
+				</div>
 				<h3>postk1</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, id, suscipit, sunt sint sed laboriosam quas at consectetur harum nostrum doloremque vel molestias soluta provident dolore eius eveniet consequuntur quibusdam. this is the next event coming up in Philly</p>
 				<span class="more"><a href="">Read More</a></span>
 			</article>
-		<aside>
+			<aside>
 				<img src="/img/grouppic1.jpg" alt="GPAA Group Picture">
 				<h3 class="sidebar">Connect with GPAA</h3>
 				<ul>
@@ -72,7 +98,7 @@
 					<li><img src="/img/social/twitter.png" alt="Twitter icon"><a href="">socialmedia</a></li>
 				</ul>
 			</aside>	
-		</main>
+		</div>
 		<footer>
 			<nav class="footernav">
 				<ul>

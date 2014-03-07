@@ -37,9 +37,9 @@
  
 
 @mixin transition($time, $type: all) {
-	-webkit-transition: $type $time ease-in-out;
-	-moz-transition: $type $time ease-in-out;
-	-ms-transition: $type $time ease-in-out;
-	-o-transition: $type $time ease-in-out;
-	 transition: $type $time ease-in-out;
+	-webkit-transition: $type $time+s ease-in-out;
+	-moz-transition: $type $time+s ease-in-out;
+	-ms-transition: $type $time+s ease-in-out;
+	-o-transition: $type $time+s ease-in-out;
+	 transition: $type $time+s ease-in-out;
 }

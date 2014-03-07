@@ -236,6 +236,13 @@ em {
   font-style: italic;
 }
 
+/* line 9, ../sass/_vars.scss */
+.shadow {
+  -webkit-box-shadow: 0px 0px 5px 0px #444444;
+  -moz-box-shadow: 0px 0px 5px 0px #444444;
+  box-shadow: 0px 0px 5px 0px #444444;
+}
+
 @font-face {
   font-family: 'archivo_narrowbold';
   src: url("archivonarrow-bold-webfont.eot");
@@ -295,46 +302,31 @@ em {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 15, ../sass/_base.scss */
+/* line 17, ../sass/_base.scss */
 body {
   width: 100%;
-  font-size: 10px;
+  font-size: 100%;
 }
 
 /*********
 * Header
 *******/
-/* line 22, ../sass/_base.scss */
-#bgimg {
-  width: 100%;
-  height: 350px;
-}
-
-/* line 26, ../sass/_base.scss */
-#foregroundwrap {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  left: 0px;
-  /*********
-  * Middle
-  *******/
-  /*********
-  * Footer
-  *******/
-}
-/* line 32, ../sass/_base.scss */
-#foregroundwrap header {
+/* line 25, ../sass/_base.scss */
+header {
   width: 100%;
 }
-/* line 35, ../sass/_base.scss */
-#foregroundwrap header .logo {
+/* line 27, ../sass/_base.scss */
+header #logo-wrap {
+  background-color: #41b7fd;
+}
+/* line 30, ../sass/_base.scss */
+header #logo-wrap #logo {
   margin: 15px 0px 5px 10px;
   width: 80%;
   height: 80%;
 }
-/* line 41, ../sass/_base.scss */
-#foregroundwrap header .hamburger {
+/* line 36, ../sass/_base.scss */
+header #logo-wrap #hamburger {
   display: inline-block;
   width: 25px;
   height: 20px;
@@ -342,191 +334,223 @@ body {
   top: 20px;
   right: 15px;
 }
-/* line 50, ../sass/_base.scss */
-#foregroundwrap header .hamburger > div {
+/* line 45, ../sass/_base.scss */
+header #logo-wrap #hamburger > div {
   background-color: white;
   height: 20%;
   width: 100%;
 }
-/* line 55, ../sass/_base.scss */
-#foregroundwrap header .hamburger > div:not(:first-child) {
+/* line 50, ../sass/_base.scss */
+header #logo-wrap #hamburger > div:not(:first-child) {
   margin-top: 20%;
 }
-/* line 61, ../sass/_base.scss */
-#foregroundwrap header .mainnav {
+/* line 57, ../sass/_base.scss */
+header #mainnav {
   background-color: white;
   text-align: center;
-  padding: 5px;
-  margin-top: 0px;
+}
+/* line 61, ../sass/_base.scss */
+header #mainnav > ul {
+  -webkit-transition: max-height 0.9s ease-in-out;
+  -moz-transition: max-height 0.9s ease-in-out;
+  -ms-transition: max-height 0.9s ease-in-out;
+  -o-transition: max-height 0.9s ease-in-out;
+  transition: max-height 0.9s ease-in-out;
+  height: auto;
+  max-height: 0px;
+  overflow-y: hidden;
 }
 /* line 67, ../sass/_base.scss */
-#foregroundwrap header .mainnav a {
+header #mainnav > ul.active {
+  max-height: 500px;
+}
+/* line 73, ../sass/_base.scss */
+header #mainnav li:first-child {
+  margin-top: 15px;
+}
+/* line 77, ../sass/_base.scss */
+header #mainnav li:last-child {
+  margin-bottom: 15px;
+}
+/* line 82, ../sass/_base.scss */
+header #mainnav a, header #mainnav a:visited, header #mainnav a:active, header #mainnav a:link {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: #41b7fd;
   font-size: 1.6em;
   font-style: italic;
   font: "archivo_narrowitalic", Helvetica, Arial, sans-serif;
-  line-height: 20px;
+  line-height: 45px;
   text-decoration: none;
 }
-/* line 75, ../sass/_base.scss */
-#foregroundwrap header .mainnav a:hover {
+/* line 89, ../sass/_base.scss */
+header #mainnav a:hover, header #mainnav a:visited:hover, header #mainnav a:active:hover, header #mainnav a:link:hover {
   color: #41b7fd;
 }
-/* line 82, ../sass/_base.scss */
-#foregroundwrap header h1 {
-  color: white;
-  font-size: 2.7em;
-  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
-  text-align: center;
-}
-/* line 89, ../sass/_base.scss */
-#foregroundwrap header p {
-  color: white;
-  font-size: 1.4em;
-  font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
-  text-align: center;
-}
-/* line 97, ../sass/_base.scss */
-#foregroundwrap header .joinbutton {
-  background: url(../img/circle.png) center center no-repeat;
-  height: 100px;
-  margin: 20px auto;
-  width: 100px;
+
+/*********
+* Middle
+*******/
+/* line 99, ../sass/_base.scss */
+#main {
+  width: 100%;
+  position: relative;
 }
 /* line 103, ../sass/_base.scss */
-#foregroundwrap header .joinbutton h2 {
-  color: #41b7fd;
-  font-size: 2em;
-  line-height: 20px;
-  padding: 20px 20px 20px 15px;
-  text-align: center;
+#main #main-text {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
 }
-/* line 112, ../sass/_base.scss */
-#foregroundwrap header .shadow {
-  -webkit-box-shadow: 0px 0px 5px 0px #444444;
-  -moz-box-shadow: 0px 0px 5px 0px #444444;
-  box-shadow: 0px 0px 5px 0px #444444;
-}
-/* line 122, ../sass/_base.scss */
-#foregroundwrap main {
-  width: 100%;
-  padding: 15px;
-}
-/* line 126, ../sass/_base.scss */
-#foregroundwrap main h2 {
-  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
-  font-size: 2.7em;
-  color: #41b7fd;
-}
-/* line 132, ../sass/_base.scss */
-#foregroundwrap main .perksection {
-  height: 300px;
+/* line 109, ../sass/_base.scss */
+#main #main-text p {
+  font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 1em;
   margin: 0px auto;
-}
-/* line 136, ../sass/_base.scss */
-#foregroundwrap main .perksection h2 {
-  color: #41b7fd;
-  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
-  font-size: 2em;
-  line-height: 20px;
-  margin: 60px 0px 0px 0px;
   text-align: center;
+  line-height: 1.1em;
+  padding: 0px 5px;
+}
+/* line 117, ../sass/_base.scss */
+#main #main-text h1 {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  margin: 25px auto;
+  padding-top: 20px;
+}
+/* line 124, ../sass/_base.scss */
+#main #inner-main {
+  width: 100%;
+  overflow-x: hidden;
+}
+/* line 128, ../sass/_base.scss */
+#main #inner-main img {
+  width: auto;
+  height: 300px;
+  margin-left: -100px;
+}
+/* line 135, ../sass/_base.scss */
+#main #inner-main .joinbutton {
+  height: 150px;
+  background: url(../img/circle.png) center center no-repeat;
+  background-size: 120px 120px;
+  margin-top: -60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  position: relative;
 }
 /* line 145, ../sass/_base.scss */
-#foregroundwrap main .perksection p {
-  color: #444444;
+#main #inner-main .joinbutton h2 {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #41b7fd;
+  font-size: 1.4em;
+  line-height: 20px;
+  text-align: center;
+  padding: 5px;
+  width: 120px;
+  height: 120px;
+  margin: 0px auto;
+}
+/* line 158, ../sass/_base.scss */
+#main .perksection {
+  height: auto;
+  margin-top: 50px img;
+  margin-top-margin: 0px auto;
+}
+/* line 165, ../sass/_base.scss */
+#main .perksection h2 {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #41b7fd;
+  font-size: 2em;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+/* line 172, ../sass/_base.scss */
+#main .perksection p {
   font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
+  color: #444444;
   font-size: 1.4em;
   line-height: 16px;
   text-align: center;
 }
-/* line 153, ../sass/_base.scss */
-#foregroundwrap main .perksection img {
-  margin: 0px auto;
-}
-/* line 157, ../sass/_base.scss */
-#foregroundwrap main .perksection .perk1 {
-  height: 33%;
-  background: url(../img/icon_cal.png) top center no-repeat;
-}
-/* line 162, ../sass/_base.scss */
-#foregroundwrap main .perksection .perk2 {
-  height: 33%;
-  background: url(../img/icon_cal.png) top center no-repeat;
-}
-/* line 167, ../sass/_base.scss */
-#foregroundwrap main .perksection .perk3 {
-  height: 33%;
-  background: url(../img/icon_cal.png) top center no-repeat;
-}
-/* line 173, ../sass/_base.scss */
-#foregroundwrap main article {
+/* line 181, ../sass/_base.scss */
+#main article {
   width: 100%;
-  padding-left: 50px;
-}
-/* line 177, ../sass/_base.scss */
-#foregroundwrap main article h3 {
-  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
-  font-size: 1.5em;
-  color: #41b7fd;
 }
 /* line 183, ../sass/_base.scss */
-#foregroundwrap main article p {
-  color: #444444;
+#main article .date {
+  margin: 0px auto;
+  width: 150px;
+}
+/* line 188, ../sass/_base.scss */
+#main article h3 {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #41b7fd;
+  font-size: 1.5em;
+  margin: 10px 0px;
+}
+/* line 193, ../sass/_base.scss */
+#main article p {
   font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
+  color: #444444;
   font-size: 1em;
   line-height: 18px;
+  max-width: 300px;
 }
-/* line 190, ../sass/_base.scss */
-#foregroundwrap main article post {
-  background: url(../img/circleblue.png) left center no-repeat;
-}
-/* line 195, ../sass/_base.scss */
-#foregroundwrap main aside {
+/* line 200, ../sass/_base.scss */
+#main aside {
   background-color: #41b7fd;
   width: 90%;
 }
-/* line 199, ../sass/_base.scss */
-#foregroundwrap main aside img {
+/* line 204, ../sass/_base.scss */
+#main aside img {
   float: left;
   width: 60%;
   height: 60%;
 }
-/* line 205, ../sass/_base.scss */
-#foregroundwrap main aside li {
+/* line 210, ../sass/_base.scss */
+#main aside li {
   padding-left: 25px;
 }
-/* line 209, ../sass/_base.scss */
-#foregroundwrap main aside a {
+/* line 214, ../sass/_base.scss */
+#main aside a {
   color: white;
   font-size: 1em;
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   line-height: 20px;
   text-decoration: none;
 }
-/* line 216, ../sass/_base.scss */
-#foregroundwrap main aside a:hover {
+/* line 221, ../sass/_base.scss */
+#main aside a:hover {
   text-decoration: underline;
   color: #41b7fd;
 }
-/* line 227, ../sass/_base.scss */
-#foregroundwrap footer {
+
+/*********
+* Footer
+*******/
+/* line 232, ../sass/_base.scss */
+footer {
   background-color: #41b7fd;
   bottom: 0px;
   height: 100px;
   margin: 0px auto;
-  position: absolute;
   text-align: center;
   width: 100%;
 }
-/* line 236, ../sass/_base.scss */
-#foregroundwrap footer .footernav {
+/* line 240, ../sass/_base.scss */
+footer .footernav {
   color: white;
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   text-align: center;
 }
-/* line 242, ../sass/_base.scss */
-#foregroundwrap footer .footernav line
+/* line 246, ../sass/_base.scss */
+footer .footernav line
 a {
   color: white;
   font-size: 1.6em;
@@ -534,13 +558,13 @@ a {
   line-height: 20px;
   text-decoration: none;
 }
-/* line 249, ../sass/_base.scss */
-#foregroundwrap footer .footernav line
+/* line 253, ../sass/_base.scss */
+footer .footernav line
 a:hover {
   text-decoration: underline;
 }
-/* line 255, ../sass/_base.scss */
-#foregroundwrap footer p {
+/* line 259, ../sass/_base.scss */
+footer p {
   bottom: 0px;
   color: #444444;
   font-size: .75em;
@@ -837,6 +861,12 @@ a:hover {
   **********/
   /*********
   * Header
+  *******/
+  /*********
+  * Middle
+  *******/
+  /*********
+  * Footer
   *******/
   /************
    *Objects & Functions
@@ -1254,45 +1284,37 @@ a:hover {
 .ie8 em {
   font-style: italic;
 }
+/* line 9, ../sass/_vars.scss */
+.ie8 .shadow {
+  -webkit-box-shadow: 0px 0px 5px 0px #444444;
+  -moz-box-shadow: 0px 0px 5px 0px #444444;
+  box-shadow: 0px 0px 5px 0px #444444;
+}
 /* line 12, ../sass/_base.scss */
 .ie8 * {
   -webkit-font-smoothing: antialiased;
 }
-/* line 15, ../sass/_base.scss */
+/* line 17, ../sass/_base.scss */
 .ie8 body {
   width: 100%;
-  font-size: 10px;
+  font-size: 100%;
 }
-/* line 22, ../sass/_base.scss */
-.ie8 #bgimg {
-  width: 100%;
-  height: 350px;
-}
-/* line 26, ../sass/_base.scss */
-.ie8 #foregroundwrap {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  left: 0px;
-  /*********
-  * Middle
-  *******/
-  /*********
-  * Footer
-  *******/
-}
-/* line 32, ../sass/_base.scss */
-.ie8 #foregroundwrap header {
+/* line 25, ../sass/_base.scss */
+.ie8 header {
   width: 100%;
 }
-/* line 35, ../sass/_base.scss */
-.ie8 #foregroundwrap header .logo {
+/* line 27, ../sass/_base.scss */
+.ie8 header #logo-wrap {
+  background-color: #41b7fd;
+}
+/* line 30, ../sass/_base.scss */
+.ie8 header #logo-wrap #logo {
   margin: 15px 0px 5px 10px;
   width: 80%;
   height: 80%;
 }
-/* line 41, ../sass/_base.scss */
-.ie8 #foregroundwrap header .hamburger {
+/* line 36, ../sass/_base.scss */
+.ie8 header #logo-wrap #hamburger {
   display: inline-block;
   width: 25px;
   height: 20px;
@@ -1300,191 +1322,215 @@ a:hover {
   top: 20px;
   right: 15px;
 }
-/* line 50, ../sass/_base.scss */
-.ie8 #foregroundwrap header .hamburger > div {
+/* line 45, ../sass/_base.scss */
+.ie8 header #logo-wrap #hamburger > div {
   background-color: white;
   height: 20%;
   width: 100%;
 }
-/* line 55, ../sass/_base.scss */
-.ie8 #foregroundwrap header .hamburger > div:not(:first-child) {
+/* line 50, ../sass/_base.scss */
+.ie8 header #logo-wrap #hamburger > div:not(:first-child) {
   margin-top: 20%;
 }
-/* line 61, ../sass/_base.scss */
-.ie8 #foregroundwrap header .mainnav {
+/* line 57, ../sass/_base.scss */
+.ie8 header #mainnav {
   background-color: white;
   text-align: center;
-  padding: 5px;
-  margin-top: 0px;
+}
+/* line 61, ../sass/_base.scss */
+.ie8 header #mainnav > ul {
+  -webkit-transition: max-height 0.9s ease-in-out;
+  -moz-transition: max-height 0.9s ease-in-out;
+  -ms-transition: max-height 0.9s ease-in-out;
+  -o-transition: max-height 0.9s ease-in-out;
+  transition: max-height 0.9s ease-in-out;
+  height: auto;
+  max-height: 0px;
+  overflow-y: hidden;
 }
 /* line 67, ../sass/_base.scss */
-.ie8 #foregroundwrap header .mainnav a {
+.ie8 header #mainnav > ul.active {
+  max-height: 500px;
+}
+/* line 73, ../sass/_base.scss */
+.ie8 header #mainnav li:first-child {
+  margin-top: 15px;
+}
+/* line 77, ../sass/_base.scss */
+.ie8 header #mainnav li:last-child {
+  margin-bottom: 15px;
+}
+/* line 82, ../sass/_base.scss */
+.ie8 header #mainnav a, .ie8 header #mainnav a:visited, .ie8 header #mainnav a:active, .ie8 header #mainnav a:link {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: #41b7fd;
   font-size: 1.6em;
   font-style: italic;
   font: "archivo_narrowitalic", Helvetica, Arial, sans-serif;
-  line-height: 20px;
+  line-height: 45px;
   text-decoration: none;
 }
-/* line 75, ../sass/_base.scss */
-.ie8 #foregroundwrap header .mainnav a:hover {
+/* line 89, ../sass/_base.scss */
+.ie8 header #mainnav a:hover, .ie8 header #mainnav a:visited:hover, .ie8 header #mainnav a:active:hover, .ie8 header #mainnav a:link:hover {
   color: #41b7fd;
 }
-/* line 82, ../sass/_base.scss */
-.ie8 #foregroundwrap header h1 {
-  color: white;
-  font-size: 2.7em;
-  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
-  text-align: center;
-}
-/* line 89, ../sass/_base.scss */
-.ie8 #foregroundwrap header p {
-  color: white;
-  font-size: 1.4em;
-  font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
-  text-align: center;
-}
-/* line 97, ../sass/_base.scss */
-.ie8 #foregroundwrap header .joinbutton {
-  background: url(../img/circle.png) center center no-repeat;
-  height: 100px;
-  margin: 20px auto;
-  width: 100px;
+/* line 99, ../sass/_base.scss */
+.ie8 #main {
+  width: 100%;
+  position: relative;
 }
 /* line 103, ../sass/_base.scss */
-.ie8 #foregroundwrap header .joinbutton h2 {
-  color: #41b7fd;
-  font-size: 2em;
-  line-height: 20px;
-  padding: 20px 20px 20px 15px;
-  text-align: center;
+.ie8 #main #main-text {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
 }
-/* line 112, ../sass/_base.scss */
-.ie8 #foregroundwrap header .shadow {
-  -webkit-box-shadow: 0px 0px 5px 0px #444444;
-  -moz-box-shadow: 0px 0px 5px 0px #444444;
-  box-shadow: 0px 0px 5px 0px #444444;
-}
-/* line 122, ../sass/_base.scss */
-.ie8 #foregroundwrap main {
-  width: 100%;
-  padding: 15px;
-}
-/* line 126, ../sass/_base.scss */
-.ie8 #foregroundwrap main h2 {
-  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
-  font-size: 2.7em;
-  color: #41b7fd;
-}
-/* line 132, ../sass/_base.scss */
-.ie8 #foregroundwrap main .perksection {
-  height: 300px;
+/* line 109, ../sass/_base.scss */
+.ie8 #main #main-text p {
+  font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 1em;
   margin: 0px auto;
-}
-/* line 136, ../sass/_base.scss */
-.ie8 #foregroundwrap main .perksection h2 {
-  color: #41b7fd;
-  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
-  font-size: 2em;
-  line-height: 20px;
-  margin: 60px 0px 0px 0px;
   text-align: center;
+  line-height: 1.1em;
+  padding: 0px 5px;
+}
+/* line 117, ../sass/_base.scss */
+.ie8 #main #main-text h1 {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  margin: 25px auto;
+  padding-top: 20px;
+}
+/* line 124, ../sass/_base.scss */
+.ie8 #main #inner-main {
+  width: 100%;
+  overflow-x: hidden;
+}
+/* line 128, ../sass/_base.scss */
+.ie8 #main #inner-main img {
+  width: auto;
+  height: 300px;
+  margin-left: -100px;
+}
+/* line 135, ../sass/_base.scss */
+.ie8 #main #inner-main .joinbutton {
+  height: 150px;
+  background: url(../img/circle.png) center center no-repeat;
+  background-size: 120px 120px;
+  margin-top: -60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  position: relative;
 }
 /* line 145, ../sass/_base.scss */
-.ie8 #foregroundwrap main .perksection p {
-  color: #444444;
+.ie8 #main #inner-main .joinbutton h2 {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #41b7fd;
+  font-size: 1.4em;
+  line-height: 20px;
+  text-align: center;
+  padding: 5px;
+  width: 120px;
+  height: 120px;
+  margin: 0px auto;
+}
+/* line 158, ../sass/_base.scss */
+.ie8 #main .perksection {
+  height: auto;
+  margin-top: 50px img;
+  margin-top-margin: 0px auto;
+}
+/* line 165, ../sass/_base.scss */
+.ie8 #main .perksection h2 {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #41b7fd;
+  font-size: 2em;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+/* line 172, ../sass/_base.scss */
+.ie8 #main .perksection p {
   font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
+  color: #444444;
   font-size: 1.4em;
   line-height: 16px;
   text-align: center;
 }
-/* line 153, ../sass/_base.scss */
-.ie8 #foregroundwrap main .perksection img {
-  margin: 0px auto;
-}
-/* line 157, ../sass/_base.scss */
-.ie8 #foregroundwrap main .perksection .perk1 {
-  height: 33%;
-  background: url(../img/icon_cal.png) top center no-repeat;
-}
-/* line 162, ../sass/_base.scss */
-.ie8 #foregroundwrap main .perksection .perk2 {
-  height: 33%;
-  background: url(../img/icon_cal.png) top center no-repeat;
-}
-/* line 167, ../sass/_base.scss */
-.ie8 #foregroundwrap main .perksection .perk3 {
-  height: 33%;
-  background: url(../img/icon_cal.png) top center no-repeat;
-}
-/* line 173, ../sass/_base.scss */
-.ie8 #foregroundwrap main article {
+/* line 181, ../sass/_base.scss */
+.ie8 #main article {
   width: 100%;
-  padding-left: 50px;
-}
-/* line 177, ../sass/_base.scss */
-.ie8 #foregroundwrap main article h3 {
-  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
-  font-size: 1.5em;
-  color: #41b7fd;
 }
 /* line 183, ../sass/_base.scss */
-.ie8 #foregroundwrap main article p {
-  color: #444444;
+.ie8 #main article .date {
+  margin: 0px auto;
+  width: 150px;
+}
+/* line 188, ../sass/_base.scss */
+.ie8 #main article h3 {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #41b7fd;
+  font-size: 1.5em;
+  margin: 10px 0px;
+}
+/* line 193, ../sass/_base.scss */
+.ie8 #main article p {
   font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
+  color: #444444;
   font-size: 1em;
   line-height: 18px;
+  max-width: 300px;
 }
-/* line 190, ../sass/_base.scss */
-.ie8 #foregroundwrap main article post {
-  background: url(../img/circleblue.png) left center no-repeat;
-}
-/* line 195, ../sass/_base.scss */
-.ie8 #foregroundwrap main aside {
+/* line 200, ../sass/_base.scss */
+.ie8 #main aside {
   background-color: #41b7fd;
   width: 90%;
 }
-/* line 199, ../sass/_base.scss */
-.ie8 #foregroundwrap main aside img {
+/* line 204, ../sass/_base.scss */
+.ie8 #main aside img {
   float: left;
   width: 60%;
   height: 60%;
 }
-/* line 205, ../sass/_base.scss */
-.ie8 #foregroundwrap main aside li {
+/* line 210, ../sass/_base.scss */
+.ie8 #main aside li {
   padding-left: 25px;
 }
-/* line 209, ../sass/_base.scss */
-.ie8 #foregroundwrap main aside a {
+/* line 214, ../sass/_base.scss */
+.ie8 #main aside a {
   color: white;
   font-size: 1em;
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   line-height: 20px;
   text-decoration: none;
 }
-/* line 216, ../sass/_base.scss */
-.ie8 #foregroundwrap main aside a:hover {
+/* line 221, ../sass/_base.scss */
+.ie8 #main aside a:hover {
   text-decoration: underline;
   color: #41b7fd;
 }
-/* line 227, ../sass/_base.scss */
-.ie8 #foregroundwrap footer {
+/* line 232, ../sass/_base.scss */
+.ie8 footer {
   background-color: #41b7fd;
   bottom: 0px;
   height: 100px;
   margin: 0px auto;
-  position: absolute;
   text-align: center;
   width: 100%;
 }
-/* line 236, ../sass/_base.scss */
-.ie8 #foregroundwrap footer .footernav {
+/* line 240, ../sass/_base.scss */
+.ie8 footer .footernav {
   color: white;
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   text-align: center;
 }
-/* line 242, ../sass/_base.scss */
-.ie8 #foregroundwrap footer .footernav line
+/* line 246, ../sass/_base.scss */
+.ie8 footer .footernav line
 a {
   color: white;
   font-size: 1.6em;
@@ -1492,13 +1538,13 @@ a {
   line-height: 20px;
   text-decoration: none;
 }
-/* line 249, ../sass/_base.scss */
-.ie8 #foregroundwrap footer .footernav line
+/* line 253, ../sass/_base.scss */
+.ie8 footer .footernav line
 a:hover {
   text-decoration: underline;
 }
-/* line 255, ../sass/_base.scss */
-.ie8 #foregroundwrap footer p {
+/* line 259, ../sass/_base.scss */
+.ie8 footer p {
   bottom: 0px;
   color: #444444;
   font-size: .75em;
