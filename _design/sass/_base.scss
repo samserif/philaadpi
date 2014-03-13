@@ -19,6 +19,7 @@ body{
 	font-size: 100%;
 }
 
+
 /*********
 * Header
 *******/
@@ -87,7 +88,7 @@ body{
 				text-decoration: none;
 			
 				&:hover {
-					color: $azure;
+					color: $black;
 				}
 			}
 		}
@@ -132,95 +133,193 @@ body{
 			}
 
 
-			.joinbutton{
+			#joinbutton {
 				height: 150px;
-				background: url(../img/circle.png) center center no-repeat;
-				background-size: 120px 120px;
-				margin-top: -60px;
+				width: 150px;
+				margin-top: -75px;
 				margin-left: auto;
 				margin-right: auto;
-				margin-bottom: 0px;
+				border-radius: 50%;
+				background-color: $white;
 				position: relative;
+				margin-bottom: 5px;
+					
+					h2 {
+						@include blue_header(1.9em);
+						line-height: 26px;
+						text-align: center;
+						padding-top: 50px;
+						
+					}
+			}
 
-				h2 {
-					@include blue_header(1.4em);
-					line-height: 20px;
-					text-align: center;
-					padding: 5px;
-					width: 120px;
-					height: 120px;
-					margin: 0px auto;
-				}
-	 		}
-				
-		}
+			.shadow {
+			  -webkit-box-shadow: 0px 0px 12px -1px $black;
+			  box-shadow: 0px 0px 12px -1px $black; 
+			}
+
+ 		}
+
+/*********
+* PERKS
+*******/
+
 
 		.perksection {
+			display: block;
 			height: auto;
-			margin-top: 50px
-				img {
-					margin: 0px auto;
+			min-width: 300px;
+			position: relative;
+			padding: 0px 10px;
+
+				.perk1, .perk2, .perk3, img {
+					display: block;
+					margin: 25px auto;
+
 				}
 
 				h2{
-					@include blue_header(2em);
+					@include blue_header(1.2em);
 					line-height: 20px;
 					text-align: center;
-					margin-bottom: 15px;
+					margin-bottom: 5px;
 				}
 
 				p{
-					@include black_body(1.4em);
+					@include black_body(.9em);
 					line-height: 16px;
 					text-align: center;	
 				}
-
-				
 		}
-		
+
+		hr {
+			height: 2px;
+			background-color: $azure;
+			margin: 25px;
+		}
+
+		.events {
+			@include blue_header(2em);
+			margin: 10px auto;
+			text-align: center;
+		}
+
+
+/*********
+* POSTS
+*******/
+
+
+
 		article{
 			width: 100%;
+
 			.date {
-				margin: 0px auto;
-				width: 150px;
+				display: block;
+				height: 75px;
+				width: 75px;
+				margin: 25px auto;
+				border-radius: 50%;
+				background-color: $azure;
+				
+				p {
+					@include white_header(1.5em);
+					display: block;
+					text-transform: uppercase;
+					text-align: center;
+					line-height: 25px;
+					padding-top: 15px;
+					margin: 0px auto;
+				}
 			}
 
 			h3 {
-				@include blue_header(1.5em);
-				margin: 10px 0px;
+					@include blue_header(1.25em);
+					margin: 10px 0px;
+					text-align: center;
+
+				}
+			
+			.post-text {
+					@include black_body(1em);
+					text-align: center;
+					line-height: 1.3em;
+					min-width: 300px;
+					padding: 0px 10px;
 			}
 
-			p{
-				@include black_body(1em);
-				line-height: 18px;
-				max-width: 300px;
+			.more a, a:visited, a:active, a:link {
+				@include blue_header(1em);
+				font-style: italic;
+				font: $italictext;
+				text-decoration: underline; 
+				text-align: center;
+				margin: 10px auto;
+				display: block;
+
+				&:hover {
+					color: navy;
+				}
 			}
 		}
 
+
+/*********
+* SIDEBAR
+*******/
 		aside {
 			background-color: $azure;
-			width: 90%;
+			width: 100%;
+			height: auto;
+			padding: 5px;
 
-			img {
-				float: left;
-				width: 60%;
-				height: 60%;
+			.sidebar-header {
+				@include white_header(1.5em);
+				margin: 5px auto;
+				text-align: center;
+				display: block;
 			}
 
-			li {
-				padding-left: 25px;
-			}
+			.sidebar-content {
+				width: 100%;
 
-			a {
-				color: $white;
-				font-size: 1em;
-				font: $headertext;
-				line-height: 20px; 
-				text-decoration: none;
-				
-				&:hover {
-					text-decoration: underline;
-					color: $azure;
+				.sidebar-pic {
+					display: block;
+					width: 90%;
+					height: auto;
+					margin: 1px auto;
+				}
+
+				ul{
+					display: block;
+					margin-left: 55px;
+
+					img{
+						width: 30px;
+						display: inline-block;
+						height: auto;
+						padding: 10px
+					}
+
+					li {
+						padding-left: 25px;
+						list-style: none;
+						text-align: left;
+					}
+
+					a, a:visited, a:active, a:link{
+						color: $white;
+						font-size: 1em;
+						font: $headertext;
+						line-height: 20px; 
+						text-decoration: none;
+
+						
+						&:hover {
+							text-decoration: none;
+							color: $black;
+						}
+					}
 				}
 			}
 		}
@@ -229,10 +328,17 @@ body{
 /*********
 * Footer
 *******/
+
+	.footer-hr {
+		height: 2px;
+		background-color: $white;
+		margin: 0px
+	}
+
 	footer{
 		background-color: $azure;
 		bottom: 0px;
-		height: 100px;
+		height: auto;
 		margin: 0px auto;
 		text-align: center;
 		width: 100%;
@@ -241,28 +347,26 @@ body{
 			color: $white;
 			font: $headertext;
 			text-align: center;
-			line
 
-			a {
-				color: $white;
-				font-size: 1.6em;
-				font: $headertext;
-				line-height: 20px; 
+
+			li:first-child {
+				padding-top: 15px;
+			}
+
+			
+			a, a:visited, a:active, a:link, a:hover {
+				@include white_body(1.3em);
+ 				line-height: 40px;
 				text-decoration: none;
 				
-				&:hover {
-					text-decoration: underline;
-				}
 			}
 		}
 
 		p {
+			@include white_body(.5em);
 			bottom: 0px;
-			color: $black;
-			font-size: .75em;
-			font: $bodytext;
 			margin: 10px;
-			position: absolute;
+			position: relative;
 			right: 0px;
 
 		}
