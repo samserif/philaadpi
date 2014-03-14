@@ -236,7 +236,7 @@ em {
   font-style: italic;
 }
 
-/* line 9, ../sass/_vars.scss */
+/* line 10, ../sass/_vars.scss */
 .shadow {
   -webkit-box-shadow: 0px 0px 5px 0px #444444;
   -moz-box-shadow: 0px 0px 5px 0px #444444;
@@ -265,6 +265,11 @@ em {
   src: url("archivonarrow-regular-webfont.eot?#iefix") format("embedded-opentype"), url("archivonarrow-regular-webfont.woff") format("woff"), url("archivonarrow-regular-webfont.ttf") format("truetype"), url("archivonarrow-regular-webfont.svg#archivo_narrowregular") format("svg");
   font-weight: normal;
   font-style: normal;
+}
+
+/* line 1, ../sass/_delete.scss */
+.desktop-only {
+  display: none;
 }
 
 /************
@@ -322,10 +327,11 @@ header #logo-wrap {
 /* line 31, ../sass/_base.scss */
 header #logo-wrap #logo {
   margin: 15px 0px 5px 10px;
+  max-width: 227px;
   width: 80%;
-  height: 80%;
+  height: auto;
 }
-/* line 37, ../sass/_base.scss */
+/* line 38, ../sass/_base.scss */
 header #logo-wrap #hamburger {
   display: inline-block;
   width: 25px;
@@ -333,23 +339,28 @@ header #logo-wrap #hamburger {
   position: absolute;
   top: 20px;
   right: 15px;
+  cursor: pointer;
 }
-/* line 46, ../sass/_base.scss */
+/* line 48, ../sass/_base.scss */
+header #logo-wrap #hamburger:active > div {
+  background-color: #444444;
+}
+/* line 54, ../sass/_base.scss */
 header #logo-wrap #hamburger > div {
   background-color: white;
   height: 20%;
   width: 100%;
 }
-/* line 51, ../sass/_base.scss */
+/* line 59, ../sass/_base.scss */
 header #logo-wrap #hamburger > div:not(:first-child) {
   margin-top: 20%;
 }
-/* line 58, ../sass/_base.scss */
+/* line 66, ../sass/_base.scss */
 header #mainnav {
   background-color: white;
   text-align: center;
 }
-/* line 62, ../sass/_base.scss */
+/* line 70, ../sass/_base.scss */
 header #mainnav > ul {
   -webkit-transition: max-height 0.9s ease-in-out;
   -moz-transition: max-height 0.9s ease-in-out;
@@ -360,19 +371,19 @@ header #mainnav > ul {
   max-height: 0px;
   overflow-y: hidden;
 }
-/* line 68, ../sass/_base.scss */
+/* line 76, ../sass/_base.scss */
 header #mainnav > ul.active {
   max-height: 500px;
 }
-/* line 74, ../sass/_base.scss */
+/* line 82, ../sass/_base.scss */
 header #mainnav li:first-child {
   margin-top: 15px;
 }
-/* line 78, ../sass/_base.scss */
+/* line 86, ../sass/_base.scss */
 header #mainnav li:last-child {
   margin-bottom: 15px;
 }
-/* line 83, ../sass/_base.scss */
+/* line 91, ../sass/_base.scss */
 header #mainnav a, header #mainnav a:visited, header #mainnav a:active, header #mainnav a:link {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: #41b7fd;
@@ -382,7 +393,7 @@ header #mainnav a, header #mainnav a:visited, header #mainnav a:active, header #
   line-height: 45px;
   text-decoration: none;
 }
-/* line 90, ../sass/_base.scss */
+/* line 98, ../sass/_base.scss */
 header #mainnav a:hover, header #mainnav a:visited:hover, header #mainnav a:active:hover, header #mainnav a:link:hover {
   color: #444444;
 }
@@ -390,7 +401,7 @@ header #mainnav a:hover, header #mainnav a:visited:hover, header #mainnav a:acti
 /*********
 * Middle
 *******/
-/* line 100, ../sass/_base.scss */
+/* line 108, ../sass/_base.scss */
 #main {
   width: 100%;
   position: relative;
@@ -404,14 +415,14 @@ header #mainnav a:hover, header #mainnav a:visited:hover, header #mainnav a:acti
   * SIDEBAR
   *******/
 }
-/* line 104, ../sass/_base.scss */
+/* line 112, ../sass/_base.scss */
 #main #main-text {
   position: absolute;
   top: 0px;
-  left: 0px;
-  right: 0px;
+  left: 5%;
+  right: 5%;
 }
-/* line 110, ../sass/_base.scss */
+/* line 118, ../sass/_base.scss */
 #main #main-text p {
   font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
   color: white;
@@ -420,8 +431,10 @@ header #mainnav a:hover, header #mainnav a:visited:hover, header #mainnav a:acti
   text-align: center;
   line-height: 1.1em;
   padding: 0px 5px;
+  width: 100%;
+  max-width: 320px;
 }
-/* line 118, ../sass/_base.scss */
+/* line 128, ../sass/_base.scss */
 #main #main-text h1 {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: white;
@@ -430,18 +443,20 @@ header #mainnav a:hover, header #mainnav a:visited:hover, header #mainnav a:acti
   margin: 25px auto;
   padding-top: 20px;
 }
-/* line 125, ../sass/_base.scss */
+/* line 135, ../sass/_base.scss */
 #main #inner-main {
   width: 100%;
   overflow-x: hidden;
 }
-/* line 129, ../sass/_base.scss */
+/* line 139, ../sass/_base.scss */
 #main #inner-main img {
-  width: auto;
-  height: 300px;
-  margin-left: -100px;
+  width: 100%;
+  height: auto;
+  min-width: 450px;
+  background: rgba(39, 62, 84, 0.82);
+  z-index: 2;
 }
-/* line 136, ../sass/_base.scss */
+/* line 147, ../sass/_base.scss */
 #main #inner-main #joinbutton {
   height: 150px;
   width: 150px;
@@ -453,7 +468,7 @@ header #mainnav a:hover, header #mainnav a:visited:hover, header #mainnav a:acti
   position: relative;
   margin-bottom: 5px;
 }
-/* line 147, ../sass/_base.scss */
+/* line 158, ../sass/_base.scss */
 #main #inner-main #joinbutton h2 {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: #41b7fd;
@@ -462,25 +477,26 @@ header #mainnav a:hover, header #mainnav a:visited:hover, header #mainnav a:acti
   text-align: center;
   padding-top: 50px;
 }
-/* line 156, ../sass/_base.scss */
+/* line 167, ../sass/_base.scss */
 #main #inner-main .shadow {
   -webkit-box-shadow: 0px 0px 12px -1px #444444;
   box-shadow: 0px 0px 12px -1px #444444;
 }
-/* line 168, ../sass/_base.scss */
+/* line 177, ../sass/_base.scss */
 #main .perksection {
   display: block;
   height: auto;
-  min-width: 300px;
+  width: 90%;
   position: relative;
-  padding: 0px 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
-/* line 175, ../sass/_base.scss */
+/* line 185, ../sass/_base.scss */
 #main .perksection .perk1, #main .perksection .perk2, #main .perksection .perk3, #main .perksection img {
   display: block;
   margin: 25px auto;
 }
-/* line 181, ../sass/_base.scss */
+/* line 191, ../sass/_base.scss */
 #main .perksection h2 {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: #41b7fd;
@@ -489,21 +505,25 @@ header #mainnav a:hover, header #mainnav a:visited:hover, header #mainnav a:acti
   text-align: center;
   margin-bottom: 5px;
 }
-/* line 188, ../sass/_base.scss */
+/* line 198, ../sass/_base.scss */
 #main .perksection p {
   font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
   color: #444444;
   font-size: 0.9em;
+  display: block;
+  margin: 0px auto;
   line-height: 16px;
   text-align: center;
+  width: 100%;
+  max-width: 320px;
 }
-/* line 195, ../sass/_base.scss */
+/* line 209, ../sass/_base.scss */
 #main hr {
   height: 2px;
   background-color: #41b7fd;
   margin: 25px;
 }
-/* line 201, ../sass/_base.scss */
+/* line 215, ../sass/_base.scss */
 #main .events {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: #41b7fd;
@@ -511,11 +531,14 @@ header #mainnav a:hover, header #mainnav a:visited:hover, header #mainnav a:acti
   margin: 10px auto;
   text-align: center;
 }
-/* line 214, ../sass/_base.scss */
+/* line 225, ../sass/_base.scss */
 #main article {
-  width: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
-/* line 217, ../sass/_base.scss */
+/* line 230, ../sass/_base.scss */
 #main article .date {
   display: block;
   height: 75px;
@@ -524,7 +547,7 @@ header #mainnav a:hover, header #mainnav a:visited:hover, header #mainnav a:acti
   border-radius: 50%;
   background-color: #41b7fd;
 }
-/* line 225, ../sass/_base.scss */
+/* line 238, ../sass/_base.scss */
 #main article .date p {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: white;
@@ -536,25 +559,28 @@ header #mainnav a:hover, header #mainnav a:visited:hover, header #mainnav a:acti
   padding-top: 15px;
   margin: 0px auto;
 }
-/* line 236, ../sass/_base.scss */
+/* line 250, ../sass/_base.scss */
 #main article h3 {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
-  color: #41b7fd;
+  color: #444444;
   font-size: 1.25em;
   margin: 10px 0px;
   text-align: center;
 }
-/* line 243, ../sass/_base.scss */
+/* line 257, ../sass/_base.scss */
 #main article .post-text {
   font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
   color: #444444;
   font-size: 1em;
   text-align: center;
   line-height: 1.3em;
-  min-width: 300px;
-  padding: 0px 10px;
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-/* line 251, ../sass/_base.scss */
+/* line 267, ../sass/_base.scss */
 #main article .more a, #main article a:visited, #main article a:active, #main article a:link {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: #41b7fd;
@@ -566,18 +592,18 @@ header #mainnav a:hover, header #mainnav a:visited:hover, header #mainnav a:acti
   margin: 10px auto;
   display: block;
 }
-/* line 260, ../sass/_base.scss */
+/* line 276, ../sass/_base.scss */
 #main article .more a:hover, #main article a:visited:hover, #main article a:active:hover, #main article a:link:hover {
   color: navy;
 }
-/* line 270, ../sass/_base.scss */
+/* line 286, ../sass/_base.scss */
 #main aside {
-  background-color: #41b7fd;
+  background-color: #0776b8;
   width: 100%;
   height: auto;
   padding: 5px;
 }
-/* line 276, ../sass/_base.scss */
+/* line 292, ../sass/_base.scss */
 #main aside .sidebar-header {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: white;
@@ -586,44 +612,41 @@ header #mainnav a:hover, header #mainnav a:visited:hover, header #mainnav a:acti
   text-align: center;
   display: block;
 }
-/* line 283, ../sass/_base.scss */
+/* line 299, ../sass/_base.scss */
 #main aside .sidebar-content {
   width: 100%;
 }
-/* line 286, ../sass/_base.scss */
+/* line 302, ../sass/_base.scss */
 #main aside .sidebar-content .sidebar-pic {
-  display: block;
   width: 90%;
   height: auto;
   margin: 1px auto;
 }
-/* line 293, ../sass/_base.scss */
+/* line 308, ../sass/_base.scss */
 #main aside .sidebar-content ul {
   display: block;
-  margin-left: 55px;
+  text-align: center;
 }
-/* line 297, ../sass/_base.scss */
+/* line 313, ../sass/_base.scss */
 #main aside .sidebar-content ul img {
-  width: 30px;
-  display: inline-block;
+  width: 40px;
   height: auto;
-  padding: 10px;
+  padding: 20px;
 }
-/* line 304, ../sass/_base.scss */
+/* line 319, ../sass/_base.scss */
 #main aside .sidebar-content ul li {
-  padding-left: 25px;
+  display: inline-block;
   list-style: none;
-  text-align: left;
 }
-/* line 310, ../sass/_base.scss */
+/* line 324, ../sass/_base.scss */
 #main aside .sidebar-content ul a, #main aside .sidebar-content ul a:visited, #main aside .sidebar-content ul a:active, #main aside .sidebar-content ul a:link {
   color: white;
-  font-size: 1em;
+  font-size: 0em;
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   line-height: 20px;
   text-decoration: none;
 }
-/* line 318, ../sass/_base.scss */
+/* line 332, ../sass/_base.scss */
 #main aside .sidebar-content ul a:hover, #main aside .sidebar-content ul a:visited:hover, #main aside .sidebar-content ul a:active:hover, #main aside .sidebar-content ul a:link:hover {
   text-decoration: none;
   color: #444444;
@@ -632,33 +655,32 @@ header #mainnav a:hover, header #mainnav a:visited:hover, header #mainnav a:acti
 /*********
 * Footer
 *******/
-/* line 332, ../sass/_base.scss */
+/* line 346, ../sass/_base.scss */
 .footer-hr {
   height: 2px;
   background-color: white;
   margin: 0px;
 }
 
-/* line 338, ../sass/_base.scss */
+/* line 352, ../sass/_base.scss */
 footer {
   background-color: #41b7fd;
-  bottom: 0px;
   height: auto;
   margin: 0px auto;
   text-align: center;
   width: 100%;
 }
-/* line 346, ../sass/_base.scss */
+/* line 359, ../sass/_base.scss */
 footer .footernav {
   color: white;
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   text-align: center;
 }
-/* line 352, ../sass/_base.scss */
+/* line 365, ../sass/_base.scss */
 footer .footernav li:first-child {
   padding-top: 15px;
 }
-/* line 357, ../sass/_base.scss */
+/* line 370, ../sass/_base.scss */
 footer .footernav a, footer .footernav a:visited, footer .footernav a:active, footer .footernav a:link, footer .footernav a:hover {
   font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
   color: white;
@@ -666,13 +688,13 @@ footer .footernav a, footer .footernav a:visited, footer .footernav a:active, fo
   line-height: 40px;
   text-decoration: none;
 }
-/* line 365, ../sass/_base.scss */
+/* line 378, ../sass/_base.scss */
 footer p {
   font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 0.5em;
   bottom: 0px;
-  margin: 10px;
+  padding: 10px 0px;
   position: relative;
   right: 0px;
 }
@@ -1387,11 +1409,15 @@ footer p {
 .ie8 em {
   font-style: italic;
 }
-/* line 9, ../sass/_vars.scss */
+/* line 10, ../sass/_vars.scss */
 .ie8 .shadow {
   -webkit-box-shadow: 0px 0px 5px 0px #444444;
   -moz-box-shadow: 0px 0px 5px 0px #444444;
   box-shadow: 0px 0px 5px 0px #444444;
+}
+/* line 1, ../sass/_delete.scss */
+.ie8 .desktop-only {
+  display: none;
 }
 /* line 12, ../sass/_base.scss */
 .ie8 * {
@@ -1413,10 +1439,11 @@ footer p {
 /* line 31, ../sass/_base.scss */
 .ie8 header #logo-wrap #logo {
   margin: 15px 0px 5px 10px;
+  max-width: 227px;
   width: 80%;
-  height: 80%;
+  height: auto;
 }
-/* line 37, ../sass/_base.scss */
+/* line 38, ../sass/_base.scss */
 .ie8 header #logo-wrap #hamburger {
   display: inline-block;
   width: 25px;
@@ -1424,23 +1451,28 @@ footer p {
   position: absolute;
   top: 20px;
   right: 15px;
+  cursor: pointer;
 }
-/* line 46, ../sass/_base.scss */
+/* line 48, ../sass/_base.scss */
+.ie8 header #logo-wrap #hamburger:active > div {
+  background-color: #444444;
+}
+/* line 54, ../sass/_base.scss */
 .ie8 header #logo-wrap #hamburger > div {
   background-color: white;
   height: 20%;
   width: 100%;
 }
-/* line 51, ../sass/_base.scss */
+/* line 59, ../sass/_base.scss */
 .ie8 header #logo-wrap #hamburger > div:not(:first-child) {
   margin-top: 20%;
 }
-/* line 58, ../sass/_base.scss */
+/* line 66, ../sass/_base.scss */
 .ie8 header #mainnav {
   background-color: white;
   text-align: center;
 }
-/* line 62, ../sass/_base.scss */
+/* line 70, ../sass/_base.scss */
 .ie8 header #mainnav > ul {
   -webkit-transition: max-height 0.9s ease-in-out;
   -moz-transition: max-height 0.9s ease-in-out;
@@ -1451,19 +1483,19 @@ footer p {
   max-height: 0px;
   overflow-y: hidden;
 }
-/* line 68, ../sass/_base.scss */
+/* line 76, ../sass/_base.scss */
 .ie8 header #mainnav > ul.active {
   max-height: 500px;
 }
-/* line 74, ../sass/_base.scss */
+/* line 82, ../sass/_base.scss */
 .ie8 header #mainnav li:first-child {
   margin-top: 15px;
 }
-/* line 78, ../sass/_base.scss */
+/* line 86, ../sass/_base.scss */
 .ie8 header #mainnav li:last-child {
   margin-bottom: 15px;
 }
-/* line 83, ../sass/_base.scss */
+/* line 91, ../sass/_base.scss */
 .ie8 header #mainnav a, .ie8 header #mainnav a:visited, .ie8 header #mainnav a:active, .ie8 header #mainnav a:link {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: #41b7fd;
@@ -1473,11 +1505,11 @@ footer p {
   line-height: 45px;
   text-decoration: none;
 }
-/* line 90, ../sass/_base.scss */
+/* line 98, ../sass/_base.scss */
 .ie8 header #mainnav a:hover, .ie8 header #mainnav a:visited:hover, .ie8 header #mainnav a:active:hover, .ie8 header #mainnav a:link:hover {
   color: #444444;
 }
-/* line 100, ../sass/_base.scss */
+/* line 108, ../sass/_base.scss */
 .ie8 #main {
   width: 100%;
   position: relative;
@@ -1491,14 +1523,14 @@ footer p {
   * SIDEBAR
   *******/
 }
-/* line 104, ../sass/_base.scss */
+/* line 112, ../sass/_base.scss */
 .ie8 #main #main-text {
   position: absolute;
   top: 0px;
-  left: 0px;
-  right: 0px;
+  left: 5%;
+  right: 5%;
 }
-/* line 110, ../sass/_base.scss */
+/* line 118, ../sass/_base.scss */
 .ie8 #main #main-text p {
   font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
   color: white;
@@ -1507,8 +1539,10 @@ footer p {
   text-align: center;
   line-height: 1.1em;
   padding: 0px 5px;
+  width: 100%;
+  max-width: 320px;
 }
-/* line 118, ../sass/_base.scss */
+/* line 128, ../sass/_base.scss */
 .ie8 #main #main-text h1 {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: white;
@@ -1517,18 +1551,20 @@ footer p {
   margin: 25px auto;
   padding-top: 20px;
 }
-/* line 125, ../sass/_base.scss */
+/* line 135, ../sass/_base.scss */
 .ie8 #main #inner-main {
   width: 100%;
   overflow-x: hidden;
 }
-/* line 129, ../sass/_base.scss */
+/* line 139, ../sass/_base.scss */
 .ie8 #main #inner-main img {
-  width: auto;
-  height: 300px;
-  margin-left: -100px;
+  width: 100%;
+  height: auto;
+  min-width: 450px;
+  background: rgba(39, 62, 84, 0.82);
+  z-index: 2;
 }
-/* line 136, ../sass/_base.scss */
+/* line 147, ../sass/_base.scss */
 .ie8 #main #inner-main #joinbutton {
   height: 150px;
   width: 150px;
@@ -1540,7 +1576,7 @@ footer p {
   position: relative;
   margin-bottom: 5px;
 }
-/* line 147, ../sass/_base.scss */
+/* line 158, ../sass/_base.scss */
 .ie8 #main #inner-main #joinbutton h2 {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: #41b7fd;
@@ -1549,25 +1585,26 @@ footer p {
   text-align: center;
   padding-top: 50px;
 }
-/* line 156, ../sass/_base.scss */
+/* line 167, ../sass/_base.scss */
 .ie8 #main #inner-main .shadow {
   -webkit-box-shadow: 0px 0px 12px -1px #444444;
   box-shadow: 0px 0px 12px -1px #444444;
 }
-/* line 168, ../sass/_base.scss */
+/* line 177, ../sass/_base.scss */
 .ie8 #main .perksection {
   display: block;
   height: auto;
-  min-width: 300px;
+  width: 90%;
   position: relative;
-  padding: 0px 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
-/* line 175, ../sass/_base.scss */
+/* line 185, ../sass/_base.scss */
 .ie8 #main .perksection .perk1, .ie8 #main .perksection .perk2, .ie8 #main .perksection .perk3, .ie8 #main .perksection img {
   display: block;
   margin: 25px auto;
 }
-/* line 181, ../sass/_base.scss */
+/* line 191, ../sass/_base.scss */
 .ie8 #main .perksection h2 {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: #41b7fd;
@@ -1576,21 +1613,25 @@ footer p {
   text-align: center;
   margin-bottom: 5px;
 }
-/* line 188, ../sass/_base.scss */
+/* line 198, ../sass/_base.scss */
 .ie8 #main .perksection p {
   font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
   color: #444444;
   font-size: 0.9em;
+  display: block;
+  margin: 0px auto;
   line-height: 16px;
   text-align: center;
+  width: 100%;
+  max-width: 320px;
 }
-/* line 195, ../sass/_base.scss */
+/* line 209, ../sass/_base.scss */
 .ie8 #main hr {
   height: 2px;
   background-color: #41b7fd;
   margin: 25px;
 }
-/* line 201, ../sass/_base.scss */
+/* line 215, ../sass/_base.scss */
 .ie8 #main .events {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: #41b7fd;
@@ -1598,11 +1639,14 @@ footer p {
   margin: 10px auto;
   text-align: center;
 }
-/* line 214, ../sass/_base.scss */
+/* line 225, ../sass/_base.scss */
 .ie8 #main article {
-  width: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
-/* line 217, ../sass/_base.scss */
+/* line 230, ../sass/_base.scss */
 .ie8 #main article .date {
   display: block;
   height: 75px;
@@ -1611,7 +1655,7 @@ footer p {
   border-radius: 50%;
   background-color: #41b7fd;
 }
-/* line 225, ../sass/_base.scss */
+/* line 238, ../sass/_base.scss */
 .ie8 #main article .date p {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: white;
@@ -1623,25 +1667,28 @@ footer p {
   padding-top: 15px;
   margin: 0px auto;
 }
-/* line 236, ../sass/_base.scss */
+/* line 250, ../sass/_base.scss */
 .ie8 #main article h3 {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
-  color: #41b7fd;
+  color: #444444;
   font-size: 1.25em;
   margin: 10px 0px;
   text-align: center;
 }
-/* line 243, ../sass/_base.scss */
+/* line 257, ../sass/_base.scss */
 .ie8 #main article .post-text {
   font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
   color: #444444;
   font-size: 1em;
   text-align: center;
   line-height: 1.3em;
-  min-width: 300px;
-  padding: 0px 10px;
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-/* line 251, ../sass/_base.scss */
+/* line 267, ../sass/_base.scss */
 .ie8 #main article .more a, .ie8 #main article a:visited, .ie8 #main article a:active, .ie8 #main article a:link {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: #41b7fd;
@@ -1653,18 +1700,18 @@ footer p {
   margin: 10px auto;
   display: block;
 }
-/* line 260, ../sass/_base.scss */
+/* line 276, ../sass/_base.scss */
 .ie8 #main article .more a:hover, .ie8 #main article a:visited:hover, .ie8 #main article a:active:hover, .ie8 #main article a:link:hover {
   color: navy;
 }
-/* line 270, ../sass/_base.scss */
+/* line 286, ../sass/_base.scss */
 .ie8 #main aside {
-  background-color: #41b7fd;
+  background-color: #0776b8;
   width: 100%;
   height: auto;
   padding: 5px;
 }
-/* line 276, ../sass/_base.scss */
+/* line 292, ../sass/_base.scss */
 .ie8 #main aside .sidebar-header {
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   color: white;
@@ -1673,74 +1720,70 @@ footer p {
   text-align: center;
   display: block;
 }
-/* line 283, ../sass/_base.scss */
+/* line 299, ../sass/_base.scss */
 .ie8 #main aside .sidebar-content {
   width: 100%;
 }
-/* line 286, ../sass/_base.scss */
+/* line 302, ../sass/_base.scss */
 .ie8 #main aside .sidebar-content .sidebar-pic {
-  display: block;
   width: 90%;
   height: auto;
   margin: 1px auto;
 }
-/* line 293, ../sass/_base.scss */
+/* line 308, ../sass/_base.scss */
 .ie8 #main aside .sidebar-content ul {
   display: block;
-  margin-left: 55px;
+  text-align: center;
 }
-/* line 297, ../sass/_base.scss */
+/* line 313, ../sass/_base.scss */
 .ie8 #main aside .sidebar-content ul img {
-  width: 30px;
-  display: inline-block;
+  width: 40px;
   height: auto;
-  padding: 10px;
+  padding: 20px;
 }
-/* line 304, ../sass/_base.scss */
+/* line 319, ../sass/_base.scss */
 .ie8 #main aside .sidebar-content ul li {
-  padding-left: 25px;
+  display: inline-block;
   list-style: none;
-  text-align: left;
 }
-/* line 310, ../sass/_base.scss */
+/* line 324, ../sass/_base.scss */
 .ie8 #main aside .sidebar-content ul a, .ie8 #main aside .sidebar-content ul a:visited, .ie8 #main aside .sidebar-content ul a:active, .ie8 #main aside .sidebar-content ul a:link {
   color: white;
-  font-size: 1em;
+  font-size: 0em;
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   line-height: 20px;
   text-decoration: none;
 }
-/* line 318, ../sass/_base.scss */
+/* line 332, ../sass/_base.scss */
 .ie8 #main aside .sidebar-content ul a:hover, .ie8 #main aside .sidebar-content ul a:visited:hover, .ie8 #main aside .sidebar-content ul a:active:hover, .ie8 #main aside .sidebar-content ul a:link:hover {
   text-decoration: none;
   color: #444444;
 }
-/* line 332, ../sass/_base.scss */
+/* line 346, ../sass/_base.scss */
 .ie8 .footer-hr {
   height: 2px;
   background-color: white;
   margin: 0px;
 }
-/* line 338, ../sass/_base.scss */
+/* line 352, ../sass/_base.scss */
 .ie8 footer {
   background-color: #41b7fd;
-  bottom: 0px;
   height: auto;
   margin: 0px auto;
   text-align: center;
   width: 100%;
 }
-/* line 346, ../sass/_base.scss */
+/* line 359, ../sass/_base.scss */
 .ie8 footer .footernav {
   color: white;
   font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
   text-align: center;
 }
-/* line 352, ../sass/_base.scss */
+/* line 365, ../sass/_base.scss */
 .ie8 footer .footernav li:first-child {
   padding-top: 15px;
 }
-/* line 357, ../sass/_base.scss */
+/* line 370, ../sass/_base.scss */
 .ie8 footer .footernav a, .ie8 footer .footernav a:visited, .ie8 footer .footernav a:active, .ie8 footer .footernav a:link, .ie8 footer .footernav a:hover {
   font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
   color: white;
@@ -1748,13 +1791,13 @@ footer p {
   line-height: 40px;
   text-decoration: none;
 }
-/* line 365, ../sass/_base.scss */
+/* line 378, ../sass/_base.scss */
 .ie8 footer p {
   font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 0.5em;
   bottom: 0px;
-  margin: 10px;
+  padding: 10px 0px;
   position: relative;
   right: 0px;
 }

@@ -28,3 +28,9 @@
 	color: $white;
 	font-size: $size;
 }
+
+@mixin black_header ($size: 2em) {
+	font: $headertext;
+	color: $black;
+	font-size: $size;
+}

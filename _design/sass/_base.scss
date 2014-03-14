@@ -30,8 +30,9 @@ body{
 
 			#logo {
 				margin: 15px 0px 5px 10px;
+				max-width: 227px;
 				width: 80%;
-				height: 80%;
+				height: auto;
 			}
 
 			#hamburger {
@@ -41,6 +42,13 @@ body{
 				position: absolute;
 				top: 20px;
 				right: 15px;
+				cursor: pointer;
+
+				&:active {
+					&>div{
+						background-color: $black;
+					}
+				}
 
 
 				&>div{
@@ -104,8 +112,8 @@ body{
 		#main-text {
 			position: absolute;
 			top: 0px;
-			left: 0px;
-			right: 0px;
+			left: 5%;
+			right: 5%;
 			
 			p{
 				@include white_body(1em);
@@ -113,6 +121,8 @@ body{
 				text-align: center;
 				line-height: 1.1em;
 				padding: 0px 5px;
+				width: 100%;
+				max-width: 320px;
 			}
 
 			h1 {
@@ -127,11 +137,12 @@ body{
 			overflow-x: hidden;
 
 			img {
-				width: auto;
-				height: 300px;
-				margin-left: -100px;
+				width: 100%;
+				height: auto;
+				min-width: 450px;
+				background: rgba(39,62,84,0.82);
+				z-index: 2;
 			}
-
 
 			#joinbutton {
 				height: 150px;
@@ -163,14 +174,13 @@ body{
 /*********
 * PERKS
 *******/
-
-
 		.perksection {
 			display: block;
 			height: auto;
-			min-width: 300px;
+			width: 90%;
 			position: relative;
-			padding: 0px 10px;
+			margin-left: auto;
+			margin-right: auto;
 
 				.perk1, .perk2, .perk3, img {
 					display: block;
@@ -187,8 +197,12 @@ body{
 
 				p{
 					@include black_body(.9em);
+					display: block;
+					margin: 0px auto;
 					line-height: 16px;
 					text-align: center;	
+					width: 100%;
+					max-width: 320px;
 				}
 		}
 
@@ -208,11 +222,10 @@ body{
 /*********
 * POSTS
 *******/
-
-
-
 		article{
-			width: 100%;
+			width: 90%;
+			@include margin-auto();
+			display: block;
 
 			.date {
 				display: block;
@@ -230,11 +243,12 @@ body{
 					line-height: 25px;
 					padding-top: 15px;
 					margin: 0px auto;
+
 				}
 			}
 
 			h3 {
-					@include blue_header(1.25em);
+					@include black_header(1.25em);
 					margin: 10px 0px;
 					text-align: center;
 
@@ -244,8 +258,10 @@ body{
 					@include black_body(1em);
 					text-align: center;
 					line-height: 1.3em;
-					min-width: 300px;
-					padding: 0px 10px;
+					width: 100%;
+					max-width: 320px;
+					display: block;
+					@include margin-auto();
 			}
 
 			.more a, a:visited, a:active, a:link {
@@ -268,7 +284,7 @@ body{
 * SIDEBAR
 *******/
 		aside {
-			background-color: $azure;
+			background-color: $dkblue;
 			width: 100%;
 			height: auto;
 			padding: 5px;
@@ -284,7 +300,6 @@ body{
 				width: 100%;
 
 				.sidebar-pic {
-					display: block;
 					width: 90%;
 					height: auto;
 					margin: 1px auto;
@@ -292,24 +307,23 @@ body{
 
 				ul{
 					display: block;
-					margin-left: 55px;
+					text-align: center;
+
 
 					img{
-						width: 30px;
-						display: inline-block;
+						width: 40px;
 						height: auto;
-						padding: 10px
+						padding: 20px
 					}
 
 					li {
-						padding-left: 25px;
+						display: inline-block;
 						list-style: none;
-						text-align: left;
 					}
 
 					a, a:visited, a:active, a:link{
 						color: $white;
-						font-size: 1em;
+						font-size: 0em;
 						font: $headertext;
 						line-height: 20px; 
 						text-decoration: none;
@@ -337,7 +351,6 @@ body{
 
 	footer{
 		background-color: $azure;
-		bottom: 0px;
 		height: auto;
 		margin: 0px auto;
 		text-align: center;
@@ -365,7 +378,7 @@ body{
 		p {
 			@include white_body(.5em);
 			bottom: 0px;
-			margin: 10px;
+			padding: 10px 0px;
 			position: relative;
 			right: 0px;
 
