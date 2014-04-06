@@ -1,0 +1,29 @@
+/************
+ *Defaults
+ ********/
+
+
+@import "_o_all";
+
+/****
+ *Widths
+ */
+
+
+/*100% Widths*/
+%one-one, %one-two, %one-three, %two-three, %one-four, %three-four, %one-five, %two-five, %three-five, %four-five, %five-six, %three-seven, %four-seven, %five-seven, %six-seven, %two-seven, %three-eight, %five-eight, %seven-eight, %four-nine, %five-nine, %seven-nine, %eight-nine, %three-ten, %seven-ten, %nine-ten {
+ 	width: 100%;
+ 	display: block;
+}
+
+/*50% Widths*/
+%one-six, %one-seven, %one-eight {
+ 	width: 50%;
+ 	display: inline-block;
+}
+
+/*33.3333% Widths*/
+%one-nine, %two-nine, %one-ten {
+ 	width: 33.3333%;
+ 	display: inline-block;
+}

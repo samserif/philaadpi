@@ -1,1 +1,1803 @@
-/*! normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:0.67em 0}h2{font-size:1.5em;margin:0.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:0.83em;margin:1.67em 0}h6{font-size:0.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}code,kbd,pre,samp{font-family:monospace, serif;_font-family:'courier new', monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}p{-webkit-hyphens:auto;-epub-hyphens:auto;-moz-hyphens:auto;hyphens:auto}b,strong,.strong{font-weight:bold}dfn,em,.em{font-style:italic}small,.small{font-size:75%}ul,ol{padding:0;list-style-type:none}dd{margin:0}.sidebar ul,.sidebar ol,.commentlist{list-style:none}.clearfix{zoom:1}.clearfix:before,.clearfix:after{content:"";display:table}.clearfix:after{clear:both}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.image-replacement{text-indent:100%;white-space:nowrap;overflow:hidden}span.amp{font-family:Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;font-style:italic}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.alert-help,.alert-info,.alert-error,.alert-success{margin:10px;padding:5px 18px;border:1px solid}.alert-help{border-color:#e8dc59;background:#ebe16f}.alert-info{border-color:#bfe4f4;background:#d5edf8}.alert-error{border-color:#f8cdce;background:#fbe3e4}.alert-success{border-color:#deeaae;background:#e6efc2}.button,.button:visited{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;border:1px solid #be0d37;border-top-color:#db0f3f;border-left-color:#db0f3f;padding:4px 12px;color:#fff;display:inline-block;font-size:11px;font-weight:bold;text-decoration:none;text-shadow:0 1px rgba(0,0,0,0.75);cursor:pointer;margin-bottom:20px;line-height:21px;border-radius:4px;background-color:#e40f42;background-image:-webkit-gradient(linear, left top, left bottom, from(#f01d4f), to(#e40f42));background-image:-webkit-linear-gradient(top, #f01d4f, #e40f42);background-image:-moz-linear-gradient(top, #f01d4f, #e40f42);background-image:-o-linear-gradient(top, #f01d4f, #e40f42);background-image:linear-gradient(to bottom, #f01d4f,#e40f42)}.button:hover,.button:focus,.button:visited:hover,.button:visited:focus{color:#fff;border:1px solid #be0d37;border-top-color:#9d0a2d;border-left-color:#9d0a2d;background-color:#cc0e3b;background-image:-webkit-gradient(linear, left top, left bottom, from(#e40f42), to(#cc0e3b));background-image:-webkit-linear-gradient(top, #e40f42, #cc0e3b);background-image:-moz-linear-gradient(top, #e40f42, #cc0e3b);background-image:-o-linear-gradient(top, #e40f42, #cc0e3b);background-image:linear-gradient(to bottom, #e40f42,#cc0e3b)}.button:active,.button:visited:active{background-color:#f01d4f;background-image:-webkit-gradient(linear, left top, left bottom, from(#e40f42), to(#f01d4f));background-image:-webkit-linear-gradient(top, #e40f42, #f01d4f);background-image:-moz-linear-gradient(top, #e40f42, #f01d4f);background-image:-o-linear-gradient(top, #e40f42, #f01d4f);background-image:linear-gradient(to bottom, #e40f42,#f01d4f)}.blue-button,.blue-button:visited{border-color:#1472ad;text-shadow:0 1px 1px #1472ad;background-color:#1681c4;background-image:-webkit-gradient(linear, left top, left bottom, from(#1990db), to(#1681c4));background-image:-webkit-linear-gradient(top, #1990db, #1681c4);background-image:-moz-linear-gradient(top, #1990db, #1681c4);background-image:-o-linear-gradient(top, #1990db, #1681c4);background-image:linear-gradient(to bottom, #1990db,#1681c4);box-shadow:inset 0 0 3px #59b3ec}.blue-button:hover,.blue-button:focus,.blue-button:visited:hover,.blue-button:visited:focus{border-color:#116396;background-color:#1472ad;background-image:-webkit-gradient(linear, left top, left bottom, from(#1784c9), to(#1472ad));background-image:-webkit-linear-gradient(top, #1784c9, #1472ad);background-image:-moz-linear-gradient(top, #1784c9, #1472ad);background-image:-o-linear-gradient(top, #1784c9, #1472ad);background-image:linear-gradient(to bottom, #1784c9,#1472ad)}.blue-button:active,.blue-button:visited:active{background-color:#1990db;background-image:-webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));background-image:-webkit-linear-gradient(top, #1681c4, #1990db);background-image:-moz-linear-gradient(top, #1681c4, #1990db);background-image:-o-linear-gradient(top, #1681c4, #1990db);background-image:linear-gradient(to bottom, #1681c4,#1990db)}body{font-family:"Georgia",Cambria,Times New Roman,Times,serif;font-size:100%;line-height:1.5;color:#565656}.wrap{width:96%;margin:0 auto}a,a:visited{color:#f01d4f}a:hover,a:focus,a:visited:hover,a:visited:focus{color:#d10e3c}a:link,a:visited:link{-webkit-tap-highlight-color:rgba(0,0,0,0.3)}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;text-rendering:optimizelegibility;font-weight:500}h1 a,.h1 a,h2 a,.h2 a,h3 a,.h3 a,h4 a,.h4 a,h5 a,.h5 a{text-decoration:none}h1,.h1{font-size:2.5em;line-height:1.333em}h2,.h2{font-size:1.75em;line-height:1.4em;margin-bottom:0.375em}h3,.h3{font-size:1.125em}h4,.h4{font-size:1.1em;font-weight:700}h5,.h5{font-size:0.846em;line-height:2.09em;text-transform:uppercase;letter-spacing:2px}.nav{border:1px solid #ccc;border-bottom:0}.nav li a{display:block;text-decoration:none;padding:10px 10px;background-color:#eee;border-bottom:1px solid #ccc}.nav li ul.sub-menu li a,.nav li ul.children li a{padding-left:30px}#content{margin-top:2.2em}.byline{color:#999}.entry-content dd{margin-left:0;font-size:0.9em;color:#787878;margin-bottom:1.5em}.entry-content img{margin:0 0 1.5em 0;max-width:100%;height:auto}.entry-content video,.entry-content object{max-width:100%;height:auto}.entry-content pre{background:#eee;border:1px solid #cecece;padding:10px}.wp-caption{max-width:100%;background:#eee;padding:5px}.wp-caption img{max-width:100%;margin-bottom:0;width:100%}.wp-caption p.wp-caption-text{font-size:0.85em;margin:4px 0 7px;text-align:center}.pagination,.wp-prev-next{margin:1.1em 0 2.2em}.pagination{text-align:center}.pagination ul{display:inline-block;white-space:nowrap;padding:0;clear:both;margin:1px}.pagination ul li{padding:0;margin:0;float:left;display:inline;overflow:hidden}.pagination ul li a,.pagination ul li span{margin:0;text-decoration:none;padding:0;line-height:1em;font-size:1em;font-weight:normal;padding:.5em;min-width:1em;display:block}.pagination ul li span.current{font-weight:bold}.wp-prev-next .prev-link{float:left}.wp-prev-next .next-link{float:right}.commentlist li{position:relative;clear:both;overflow:hidden;list-style-type:none;margin-bottom:1.5em;padding:0.7335em 10px}.commentlist li:last-child{margin-bottom:0}.commentlist li ul.children{margin:0}.commentlist li[class*=depth-]{margin-top:1.1em}.commentlist li.depth-1{margin-left:0;margin-top:0}.commentlist li:not(.depth-1){margin-right:-10px;margin-left:-10px;margin-top:0;padding-bottom:0}.commentlist .odd{background:#eee}.commentlist .even{background:#fefefe}.commentlist .vcard{margin-left:50px}.commentlist .vcard cite.fn{font-weight:700;font-style:normal}.commentlist .vcard time{float:right}.commentlist .vcard time a{color:#999;text-decoration:none}.commentlist .vcard time a:hover{text-decoration:underline}.commentlist .vcard img.avatar{position:absolute;left:10px;padding:2px;border:1px solid #cecece;background:#fff}.commentlist .comment_content{margin-left:50px}.commentlist .comment_content p{margin:0.7335em 0 1.5em;font-size:1em;line-height:1.5em}.commentlist .comment-reply-link{text-decoration:none;float:right;background:#4598bb;padding:3px 5px;color:#fff;opacity:0.65;margin-bottom:10px;font-weight:700;font-size:0.9em}.commentlist .comment-reply-link:hover,.commentlist .comment-reply-link:focus{opacity:1}.respond-form{margin:1.5em 10px;padding-bottom:2.2em}.respond-form form{margin:0.75em 0}.respond-form form li{list-style-type:none;clear:both;margin-bottom:0.7335em}.respond-form form li label,.respond-form form li small{display:none}.respond-form form input[type=text],.respond-form form input[type=email],.respond-form form input[type=url],.respond-form form textarea{padding:3px 6px;background:#efefef;border:2px solid #cecece;line-height:1.5em}.respond-form form input[type=text]:focus,.respond-form form input[type=email]:focus,.respond-form form input[type=url]:focus,.respond-form form textarea:focus{background:#fff}.respond-form form input[type=text]:invalid,.respond-form form input[type=email]:invalid,.respond-form form input[type=url]:invalid,.respond-form form textarea:invalid{outline:none;border-color:#fbc2c4;background-color:#f6e7eb;-webkit-box-shadow:none;-moz-box-shadow:none;-ms-box-shadow:none;box-shadow:none}.respond-form form input[type=text],.respond-form form input[type=email],.respond-form form input[type=url]{max-width:400px;min-width:250px}.respond-form form textarea{resize:none;width:97.3%;height:150px}#comment-form-title{margin:0 0 1.1em}#allowed_tags{margin:1.5em 10px 0.7335em 0}.nocomments{margin:0 20px 1.1em}.footer{clear:both}@media only screen and (min-width: 481px){.entry-content .alignleft,.entry-content img.alignleft{margin-right:1.5em;display:inline;float:left}.entry-content .alignright,.entry-content img.alignright{margin-left:1.5em;display:inline;float:right}.entry-content .aligncenter,.entry-content img.aligncenter{margin-right:auto;margin-left:auto;display:block;clear:both}}@media only screen and (min-width: 768px){.onecol{width:5.801104972%}.twocol{width:14.364640883%}.threecol{width:22.928176794%}.fourcol{width:31.491712705%}.fivecol{width:40.055248616%}.sixcol{width:48.618784527%}.sevencol{width:57.182320438000005%}.eightcol{width:65.74585634900001%}.ninecol{width:74.30939226%}.tencol{width:82.87292817100001%}.elevencol{width:91.436464082%}.twelvecol{width:99.999999993%}.onecol,.twocol,.threecol,.fourcol,.fivecol,.sixcol,.sevencol,.eightcol,.ninecol,.tencol,.elevencol,.twelvecol{position:relative;float:left;margin-left:2.762430939%}.first{margin-left:0}.last{float:right}.wrap{max-width:1140px}.nav{background:#eee;border:0}.nav ul{margin-top:0}.nav li{float:left;position:relative}.nav li a{border-bottom:0}.nav li a:hover,.nav li a:focus{background-color:#dedede}.nav li ul.sub-menu,.nav li ul.children{margin-top:0;border:1px solid #ccc;border-top:0;position:absolute;overflow:hidden;visibility:hidden;z-index:8999}.nav li ul.sub-menu li a,.nav li ul.children li a{padding-left:10px;border-right:0;display:block;width:180px;border-bottom:1px solid #ccc}.nav li ul.sub-menu li:last-child a,.nav li ul.children li:last-child a{border-bottom:0}.nav li:hover ul{top:auto;overflow:visible;visibility:visible}.sidebar{margin-top:2.2em}.widgettitle{border-bottom:2px solid #444;margin-bottom:0.75em}.widget{padding:0 10px;margin:2.2em 0}.widget ul li{margin-bottom:0.75em}.widget ul li ul{margin-top:0.75em;padding-left:1em}}@media print{*{background:transparent !important;color:black !important;text-shadow:none !important;filter:none !important;-ms-filter:none !important}a,a:visited{color:#444 !important;text-decoration:underline}a:after,a:visited:after{content:" (" attr(href) ")"}a abbr[title]:after,a:visited abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h2,h3{page-break-after:avoid}.sidebar,.page-navigation,.wp-prev-next,.respond-form,nav{display:none}}
+/*
+ *  
+ */
+/**
+ * CSS Reset for Drupal 7
+ */
+/* line 118, ../sass/_reset.scss */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+input,
+select,
+textarea,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+td.menu-disabled,
+ul.links,
+ul.links.inline,
+ul.links li,
+.block ul,
+div.admin,
+tr.even,
+tr.odd,
+tr.drag,
+tbody,
+tbody th,
+thead th,
+.breadcrumb,
+.item-list .icon,
+.item-list .title,
+.item-list ul,
+.item-list ul li,
+ol.task-list li.active,
+.form-item,
+tr.odd .form-item,
+tr.even .form-item,
+.form-item .description,
+.form-item label,
+.form-item label.option,
+.form-checkboxes,
+.form-radios,
+.form-checkboxes .form-item,
+.form-radios .form-item,
+.marker,
+.form-required,
+.more-link,
+.more-help-link,
+.item-list .pager,
+.item-list .pager li,
+.pager-current,
+.tips,
+ul.primary,
+ul.primary li,
+ul.primary li a,
+ul.primary li.active a,
+ul.primary li a:hover,
+ul.secondary,
+ul.secondary li,
+ul.secondary a,
+ul.secondary a.active,
+.resizable-textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* Drupal: system-menus.css */
+/* line 132, ../sass/_reset.scss */
+ul.links,
+ul.links.inline,
+ul.links li,
+.block ul,
+ol,
+ul,
+.item-list ul,
+.item-list ul li {
+  list-style: none;
+}
+
+/* line 136, ../sass/_reset.scss */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* line 142, ../sass/_reset.scss */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* Remember to highlight inserts somehow! */
+/* line 148, ../sass/_reset.scss */
+ins {
+  text-decoration: none;
+}
+
+/* line 151, ../sass/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+/* line 156, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+ * Font reset.
+ *
+ * Specifically targets form elements which browsers often times give
+ * special treatment.
+ */
+/* line 169, ../sass/_reset.scss */
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 172, ../sass/_reset.scss */
+textarea {
+  font-size: 1em;
+  line-height: 1.538em;
+}
+
+/**
+ * Markup free clearing.
+ *
+ * Consider adding your own selectors to this instead of finding ways
+ * to sneak the clearfix class into Drupal's markup.
+ * From http://perishablepress.com/press/2009/12/06/new-clearfix-hack
+ */
+/* line 185, ../sass/_reset.scss */
+ul.links:after,
+div.admin-panel .body:after,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Exclude inline links from clearfix behavior */
+/* line 194, ../sass/_reset.scss */
+ul.inline:after {
+  content: "";
+  display: none;
+  clear: none;
+}
+
+/* IE6 */
+/* line 203, ../sass/_reset.scss */
+* html .form-item,
+* html ul.links,
+* html div.admin-panel .body,
+* html .clearfix {
+  height: 1%;
+}
+
+/* IE7 */
+/* line 210, ../sass/_reset.scss */
+*:first-child + html .form-item,
+*:first-child + html ul.links,
+*:first-child + html div.admin-panel .body,
+*:first-child + html .clearfix {
+  min-height: 1%;
+}
+
+/* line 214, ../sass/_reset.scss */
+em {
+  font-style: italic;
+}
+
+/* line 10, ../sass/_vars.scss */
+.shadow {
+  -webkit-box-shadow: 0px 0px 5px 0px #444444;
+  -moz-box-shadow: 0px 0px 5px 0px #444444;
+  box-shadow: 0px 0px 5px 0px #444444;
+}
+
+@font-face {
+  font-family: 'archivo_narrowbold';
+  src: url("archivonarrow-bold-webfont.eot");
+  src: url("archivonarrow-bold-webfont.eot?#iefix") format("embedded-opentype"), url("archivonarrow-bold-webfont.woff") format("woff"), url("archivonarrow-bold-webfont.ttf") format("truetype"), url("archivonarrow-bold-webfont.svg#archivo_narrowbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'archivo_narrowitalic';
+  src: url("archivonarrow-italic-webfont.eot");
+  src: url("archivonarrow-italic-webfont.eot?#iefix") format("embedded-opentype"), url("archivonarrow-italic-webfont.woff") format("woff"), url("archivonarrow-italic-webfont.ttf") format("truetype"), url("archivonarrow-italic-webfont.svg#archivo_narrowitalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'archivo_narrowregular';
+  src: url("archivonarrow-regular-webfont.eot");
+  src: url("archivonarrow-regular-webfont.eot?#iefix") format("embedded-opentype"), url("archivonarrow-regular-webfont.woff") format("woff"), url("archivonarrow-regular-webfont.ttf") format("truetype"), url("archivonarrow-regular-webfont.svg#archivo_narrowregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 1, ../sass/_delete.scss */
+.desktop-only {
+  display: none;
+}
+
+/************
+ *Objects & Functions
+ ********/
+/************
+ *Defaults
+ ********/
+/************
+ *Defaults
+ ********/
+/****
+ *Box Sizing
+ */
+/****
+ *Alignments
+ */
+/****
+ *Margins
+ */
+/****
+ *Transitions
+ */
+/****
+ *Widths
+ */
+/*100% Widths*/
+/*50% Widths*/
+/*33.3333% Widths*/
+/*************
+* Outer Containers
+**********/
+/* line 12, ../sass/_base.scss */
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 17, ../sass/_base.scss */
+body {
+  width: 100%;
+  font-size: 100%;
+}
+
+/*********
+* Header
+*******/
+/* line 26, ../sass/_base.scss */
+header {
+  width: 100%;
+}
+/* line 28, ../sass/_base.scss */
+header #logo-wrap {
+  background-color: #41b7fd;
+}
+/* line 31, ../sass/_base.scss */
+header #logo-wrap #logo {
+  margin: 15px 0px 5px 10px;
+  max-width: 227px;
+  width: 80%;
+  height: auto;
+}
+/* line 38, ../sass/_base.scss */
+header #logo-wrap #hamburger {
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  cursor: pointer;
+}
+/* line 48, ../sass/_base.scss */
+header #logo-wrap #hamburger:active > div {
+  background-color: #444444;
+}
+/* line 54, ../sass/_base.scss */
+header #logo-wrap #hamburger > div {
+  background-color: white;
+  height: 20%;
+  width: 100%;
+}
+/* line 59, ../sass/_base.scss */
+header #logo-wrap #hamburger > div:not(:first-child) {
+  margin-top: 20%;
+}
+/* line 66, ../sass/_base.scss */
+header #mainnav {
+  background-color: white;
+  text-align: center;
+}
+/* line 70, ../sass/_base.scss */
+header #mainnav > ul {
+  -webkit-transition: max-height 0.9s ease-in-out;
+  -moz-transition: max-height 0.9s ease-in-out;
+  -ms-transition: max-height 0.9s ease-in-out;
+  -o-transition: max-height 0.9s ease-in-out;
+  transition: max-height 0.9s ease-in-out;
+  height: auto;
+  max-height: 0px;
+  overflow-y: hidden;
+}
+/* line 76, ../sass/_base.scss */
+header #mainnav > ul.active {
+  max-height: 500px;
+}
+/* line 82, ../sass/_base.scss */
+header #mainnav li:first-child {
+  margin-top: 15px;
+}
+/* line 86, ../sass/_base.scss */
+header #mainnav li:last-child {
+  margin-bottom: 15px;
+}
+/* line 91, ../sass/_base.scss */
+header #mainnav a, header #mainnav a:visited, header #mainnav a:active, header #mainnav a:link {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #41b7fd;
+  font-size: 1.6em;
+  font-style: italic;
+  font: "archivo_narrowitalic", Helvetica, Arial, sans-serif;
+  line-height: 45px;
+  text-decoration: none;
+}
+/* line 98, ../sass/_base.scss */
+header #mainnav a:hover, header #mainnav a:visited:hover, header #mainnav a:active:hover, header #mainnav a:link:hover {
+  color: #444444;
+}
+
+/*********
+* Middle
+*******/
+/* line 108, ../sass/_base.scss */
+#main {
+  width: 100%;
+  position: relative;
+  /*********
+  * PERKS
+  *******/
+  /*********
+  * POSTS
+  *******/
+  /*********
+  * SIDEBAR
+  *******/
+}
+/* line 112, ../sass/_base.scss */
+#main #main-text {
+  position: absolute;
+  top: 0px;
+  left: 5%;
+  right: 5%;
+}
+/* line 118, ../sass/_base.scss */
+#main #main-text p {
+  font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 1em;
+  margin: 0px auto;
+  text-align: center;
+  line-height: 1.1em;
+  padding: 0px 5px;
+  width: 100%;
+  max-width: 320px;
+}
+/* line 128, ../sass/_base.scss */
+#main #main-text h1 {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  margin: 25px auto;
+  padding-top: 20px;
+}
+/* line 135, ../sass/_base.scss */
+#main #inner-main {
+  width: 100%;
+  overflow-x: hidden;
+}
+/* line 139, ../sass/_base.scss */
+#main #inner-main img {
+  width: 100%;
+  height: auto;
+  min-width: 450px;
+  background: rgba(39, 62, 84, 0.82);
+  z-index: 2;
+}
+/* line 147, ../sass/_base.scss */
+#main #inner-main #joinbutton {
+  height: 150px;
+  width: 150px;
+  margin-top: -75px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  margin-bottom: 5px;
+}
+/* line 158, ../sass/_base.scss */
+#main #inner-main #joinbutton h2 {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #41b7fd;
+  font-size: 1.9em;
+  line-height: 26px;
+  text-align: center;
+  padding-top: 50px;
+}
+/* line 167, ../sass/_base.scss */
+#main #inner-main .shadow {
+  -webkit-box-shadow: 0px 0px 12px -1px #444444;
+  box-shadow: 0px 0px 12px -1px #444444;
+}
+/* line 177, ../sass/_base.scss */
+#main .perksection {
+  display: block;
+  height: auto;
+  width: 90%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 185, ../sass/_base.scss */
+#main .perksection .perk1, #main .perksection .perk2, #main .perksection .perk3, #main .perksection img {
+  display: block;
+  margin: 25px auto;
+}
+/* line 191, ../sass/_base.scss */
+#main .perksection h2 {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #41b7fd;
+  font-size: 1.2em;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+/* line 198, ../sass/_base.scss */
+#main .perksection p {
+  font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
+  color: #444444;
+  font-size: 0.9em;
+  display: block;
+  margin: 0px auto;
+  line-height: 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+}
+/* line 209, ../sass/_base.scss */
+#main hr {
+  height: 2px;
+  background-color: #41b7fd;
+  margin: 25px;
+}
+/* line 215, ../sass/_base.scss */
+#main .events {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #41b7fd;
+  font-size: 2em;
+  margin: 10px auto;
+  text-align: center;
+}
+/* line 225, ../sass/_base.scss */
+#main article {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+/* line 230, ../sass/_base.scss */
+#main article .date {
+  display: block;
+  height: 75px;
+  width: 75px;
+  margin: 25px auto;
+  border-radius: 50%;
+  background-color: #41b7fd;
+}
+/* line 238, ../sass/_base.scss */
+#main article .date p {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 1.5em;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 25px;
+  padding-top: 15px;
+  margin: 0px auto;
+}
+/* line 250, ../sass/_base.scss */
+#main article h3 {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #444444;
+  font-size: 1.25em;
+  margin: 10px 0px;
+  text-align: center;
+}
+/* line 257, ../sass/_base.scss */
+#main article .post-text {
+  font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
+  color: #444444;
+  font-size: 1em;
+  text-align: center;
+  line-height: 1.3em;
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 267, ../sass/_base.scss */
+#main article .more a, #main article a:visited, #main article a:active, #main article a:link {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #41b7fd;
+  font-size: 1em;
+  font-style: italic;
+  font: "archivo_narrowitalic", Helvetica, Arial, sans-serif;
+  text-decoration: underline;
+  text-align: center;
+  margin: 10px auto;
+  display: block;
+}
+/* line 276, ../sass/_base.scss */
+#main article .more a:hover, #main article a:visited:hover, #main article a:active:hover, #main article a:link:hover {
+  color: navy;
+}
+/* line 286, ../sass/_base.scss */
+#main aside {
+  background-color: #0776b8;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}
+/* line 292, ../sass/_base.scss */
+#main aside .sidebar-header {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 1.5em;
+  margin: 5px auto;
+  text-align: center;
+  display: block;
+}
+/* line 299, ../sass/_base.scss */
+#main aside .sidebar-content {
+  width: 100%;
+}
+/* line 302, ../sass/_base.scss */
+#main aside .sidebar-content .sidebar-pic {
+  width: 90%;
+  height: auto;
+  margin: 1px auto;
+}
+/* line 308, ../sass/_base.scss */
+#main aside .sidebar-content ul {
+  display: block;
+  text-align: center;
+}
+/* line 313, ../sass/_base.scss */
+#main aside .sidebar-content ul img {
+  width: 40px;
+  height: auto;
+  padding: 20px;
+}
+/* line 319, ../sass/_base.scss */
+#main aside .sidebar-content ul li {
+  display: inline-block;
+  list-style: none;
+}
+/* line 324, ../sass/_base.scss */
+#main aside .sidebar-content ul a, #main aside .sidebar-content ul a:visited, #main aside .sidebar-content ul a:active, #main aside .sidebar-content ul a:link {
+  color: white;
+  font-size: 0em;
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  line-height: 20px;
+  text-decoration: none;
+}
+/* line 332, ../sass/_base.scss */
+#main aside .sidebar-content ul a:hover, #main aside .sidebar-content ul a:visited:hover, #main aside .sidebar-content ul a:active:hover, #main aside .sidebar-content ul a:link:hover {
+  text-decoration: none;
+  color: #444444;
+}
+
+/*********
+* Footer
+*******/
+/* line 346, ../sass/_base.scss */
+.footer-hr {
+  height: 2px;
+  background-color: white;
+  margin: 0px;
+}
+
+/* line 352, ../sass/_base.scss */
+footer {
+  background-color: #41b7fd;
+  height: auto;
+  margin: 0px auto;
+  text-align: center;
+  width: 100%;
+}
+/* line 359, ../sass/_base.scss */
+footer .footernav {
+  color: white;
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+/* line 365, ../sass/_base.scss */
+footer .footernav li:first-child {
+  padding-top: 15px;
+}
+/* line 370, ../sass/_base.scss */
+footer .footernav a, footer .footernav a:visited, footer .footernav a:active, footer .footernav a:link, footer .footernav a:hover {
+  font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 1.3em;
+  line-height: 40px;
+  text-decoration: none;
+}
+/* line 378, ../sass/_base.scss */
+footer p {
+  font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 0.5em;
+  bottom: 0px;
+  padding: 10px 0px;
+  position: relative;
+  right: 0px;
+}
+
+@media only screen and (min-width: 480px) {
+  /************
+   *Objects & Functions
+   ********/
+  /************
+   *Defaults
+   ********/
+  /************
+   *Defaults
+   ********/
+  /****
+   *Box Sizing
+   */
+  /****
+   *Alignments
+   */
+  /****
+   *Margins
+   */
+  /****
+   *Transitions
+   */
+  /****
+   *Widths
+   */
+  /*100% Widths*/
+  /*50% Widths*/
+  /*33.3333% Widths*/
+  /*************
+  * Outer Containers
+  **********/
+  /*********
+  * Header
+  *******/
+  /*********
+  * Middle
+  *******/
+  /*********
+  * Footer
+  *******/
+}
+@media only screen and (min-width: 768px) {
+  /************
+   *Objects & Functions
+   ********/
+  /************
+   *Defaults
+   ********/
+  /************
+   *Defaults
+   ********/
+  /****
+   *Box Sizing
+   */
+  /****
+   *Alignments
+   */
+  /****
+   *Margins
+   */
+  /****
+   *Transitions
+   */
+  /****
+   *Widths
+   */
+  /*100% Widths*/
+  /*50% Widths*/
+  /*33.3333% Widths*/
+  /*************
+  * Outer Containers
+  **********/
+  /*********
+  * Header
+  *******/
+  /*********
+  * Middle
+  *******/
+  /*********
+  * Footer
+  *******/
+}
+@media only screen and (min-width: 1024px) {
+  /************
+   *Objects & Functions
+   ********/
+  /************
+   *Defaults
+   ********/
+  /************
+   *Defaults
+   ********/
+  /****
+   *Box Sizing
+   */
+  /****
+   *Alignments
+   */
+  /****
+   *Margins
+   */
+  /****
+   *Transitions
+   */
+  /****
+   *Widths
+   */
+  /*One Base*/
+  /*Two Base*/
+  /*Three Base*/
+  /*Four Base*/
+  /*Five Base*/
+  /*Six Base*/
+  /*Seven Base*/
+  /*Eight Base*/
+  /*Nine Base*/
+  /*Ten Base*/
+  /*************
+  * Outer Containers
+  **********/
+  /*********
+  * Header
+  *******/
+  /*********
+  * Middle
+  *******/
+  /*********
+  * Footer
+  *******/
+}
+@media only screen and (min-width: 1280px) {
+  /************
+   *Objects & Functions
+   ********/
+  /************
+   *Defaults
+   ********/
+  /************
+   *Defaults
+   ********/
+  /****
+   *Box Sizing
+   */
+  /****
+   *Alignments
+   */
+  /****
+   *Margins
+   */
+  /****
+   *Transitions
+   */
+  /****
+   *Widths
+   */
+  /*One Base*/
+  /*Two Base*/
+  /*Three Base*/
+  /*Four Base*/
+  /*Five Base*/
+  /*Six Base*/
+  /*Seven Base*/
+  /*Eight Base*/
+  /*Nine Base*/
+  /*Ten Base*/
+  /*************
+  * Outer Containers
+  **********/
+  /*********
+  * Header
+  *******/
+  /*********
+  * Middle
+  *******/
+  /*********
+  * Footer
+  *******/
+}
+@media only screen and (min-width: 1600px) {
+  /************
+   *Objects & Functions
+   ********/
+  /************
+   *Defaults
+   ********/
+  /************
+   *Defaults
+   ********/
+  /****
+   *Box Sizing
+   */
+  /****
+   *Alignments
+   */
+  /****
+   *Margins
+   */
+  /****
+   *Transitions
+   */
+  /****
+   *Widths
+   */
+  /*One Base*/
+  /*Two Base*/
+  /*Three Base*/
+  /*Four Base*/
+  /*Five Base*/
+  /*Six Base*/
+  /*Seven Base*/
+  /*Eight Base*/
+  /*Nine Base*/
+  /*Ten Base*/
+  /*************
+  * Outer Containers
+  **********/
+  /*********
+  * Header
+  *******/
+  /*********
+  * Middle
+  *******/
+  /*********
+  * Footer
+  *******/
+}
+@media only print {
+  /**
+   *Print Styles
+   */
+}
+/* line 45, ../sass/style.scss */
+.ie8 {
+  /**
+   * CSS Reset for Drupal 7
+   */
+  /* Drupal: system-menus.css */
+  /* Remember to highlight inserts somehow! */
+  /* Tables still need 'cellspacing="0"' in the markup. */
+  /**
+   * Font reset.
+   *
+   * Specifically targets form elements which browsers often times give
+   * special treatment.
+   */
+  /**
+   * Markup free clearing.
+   *
+   * Consider adding your own selectors to this instead of finding ways
+   * to sneak the clearfix class into Drupal's markup.
+   * From http://perishablepress.com/press/2009/12/06/new-clearfix-hack
+   */
+  /* Exclude inline links from clearfix behavior */
+  /* IE6 */
+  /* IE7 */
+  /************
+   *Objects & Functions
+   ********/
+  /************
+   *Defaults
+   ********/
+  /************
+   *Defaults
+   ********/
+  /****
+   *Box Sizing
+   */
+  /****
+   *Alignments
+   */
+  /****
+   *Margins
+   */
+  /****
+   *Transitions
+   */
+  /****
+   *Widths
+   */
+  /*100% Widths*/
+  /*50% Widths*/
+  /*33.3333% Widths*/
+  /*************
+  * Outer Containers
+  **********/
+  /*********
+  * Header
+  *******/
+  /*********
+  * Middle
+  *******/
+  /*********
+  * Footer
+  *******/
+  /************
+   *Objects & Functions
+   ********/
+  /************
+   *Defaults
+   ********/
+  /************
+   *Defaults
+   ********/
+  /****
+   *Box Sizing
+   */
+  /****
+   *Alignments
+   */
+  /****
+   *Margins
+   */
+  /****
+   *Transitions
+   */
+  /****
+   *Widths
+   */
+  /*100% Widths*/
+  /*50% Widths*/
+  /*33.3333% Widths*/
+  /*************
+  * Outer Containers
+  **********/
+  /*********
+  * Header
+  *******/
+  /*********
+  * Middle
+  *******/
+  /*********
+  * Footer
+  *******/
+  /************
+   *Objects & Functions
+   ********/
+  /************
+   *Defaults
+   ********/
+  /************
+   *Defaults
+   ********/
+  /****
+   *Box Sizing
+   */
+  /****
+   *Alignments
+   */
+  /****
+   *Margins
+   */
+  /****
+   *Transitions
+   */
+  /****
+   *Widths
+   */
+  /*100% Widths*/
+  /*50% Widths*/
+  /*33.3333% Widths*/
+  /*************
+  * Outer Containers
+  **********/
+  /*********
+  * Header
+  *******/
+  /*********
+  * Middle
+  *******/
+  /*********
+  * Footer
+  *******/
+  /************
+   *Objects & Functions
+   ********/
+  /************
+   *Defaults
+   ********/
+  /************
+   *Defaults
+   ********/
+  /****
+   *Box Sizing
+   */
+  /****
+   *Alignments
+   */
+  /****
+   *Margins
+   */
+  /****
+   *Transitions
+   */
+  /****
+   *Widths
+   */
+  /*One Base*/
+  /*Two Base*/
+  /*Three Base*/
+  /*Four Base*/
+  /*Five Base*/
+  /*Six Base*/
+  /*Seven Base*/
+  /*Eight Base*/
+  /*Nine Base*/
+  /*Ten Base*/
+  /*************
+  * Outer Containers
+  **********/
+  /*********
+  * Header
+  *******/
+  /*********
+  * Middle
+  *******/
+  /*********
+  * Footer
+  *******/
+  /************
+   *Objects & Functions
+   ********/
+  /************
+   *Defaults
+   ********/
+  /************
+   *Defaults
+   ********/
+  /****
+   *Box Sizing
+   */
+  /****
+   *Alignments
+   */
+  /****
+   *Margins
+   */
+  /****
+   *Transitions
+   */
+  /****
+   *Widths
+   */
+  /*One Base*/
+  /*Two Base*/
+  /*Three Base*/
+  /*Four Base*/
+  /*Five Base*/
+  /*Six Base*/
+  /*Seven Base*/
+  /*Eight Base*/
+  /*Nine Base*/
+  /*Ten Base*/
+  /*************
+  * Outer Containers
+  **********/
+  /*********
+  * Header
+  *******/
+  /*********
+  * Middle
+  *******/
+  /*********
+  * Footer
+  *******/
+  /************
+   *Objects & Functions
+   ********/
+  /************
+   *Defaults
+   ********/
+  /************
+   *Defaults
+   ********/
+  /****
+   *Box Sizing
+   */
+  /****
+   *Alignments
+   */
+  /****
+   *Margins
+   */
+  /****
+   *Transitions
+   */
+  /****
+   *Widths
+   */
+  /*One Base*/
+  /*Two Base*/
+  /*Three Base*/
+  /*Four Base*/
+  /*Five Base*/
+  /*Six Base*/
+  /*Seven Base*/
+  /*Eight Base*/
+  /*Nine Base*/
+  /*Ten Base*/
+  /*************
+  * Outer Containers
+  **********/
+  /*********
+  * Header
+  *******/
+  /*********
+  * Middle
+  *******/
+  /*********
+  * Footer
+  *******/
+}
+/* line 118, ../sass/_reset.scss */
+.ie8 html,
+.ie8 body,
+.ie8 div,
+.ie8 span,
+.ie8 applet,
+.ie8 object,
+.ie8 iframe,
+.ie8 h1,
+.ie8 h2,
+.ie8 h3,
+.ie8 h4,
+.ie8 h5,
+.ie8 h6,
+.ie8 p,
+.ie8 blockquote,
+.ie8 pre,
+.ie8 a,
+.ie8 abbr,
+.ie8 acronym,
+.ie8 address,
+.ie8 big,
+.ie8 cite,
+.ie8 code,
+.ie8 del,
+.ie8 dfn,
+.ie8 em,
+.ie8 font,
+.ie8 img,
+.ie8 ins,
+.ie8 kbd,
+.ie8 q,
+.ie8 s,
+.ie8 samp,
+.ie8 small,
+.ie8 strike,
+.ie8 strong,
+.ie8 sub,
+.ie8 sup,
+.ie8 tt,
+.ie8 var,
+.ie8 b,
+.ie8 u,
+.ie8 i,
+.ie8 center,
+.ie8 dl,
+.ie8 dt,
+.ie8 dd,
+.ie8 ol,
+.ie8 ul,
+.ie8 li,
+.ie8 fieldset,
+.ie8 form,
+.ie8 input,
+.ie8 select,
+.ie8 textarea,
+.ie8 label,
+.ie8 legend,
+.ie8 table,
+.ie8 caption,
+.ie8 tbody,
+.ie8 tfoot,
+.ie8 thead,
+.ie8 tr,
+.ie8 th,
+.ie8 td,
+.ie8 td.menu-disabled,
+.ie8 ul.links,
+.ie8 ul.links.inline,
+.ie8 ul.links li,
+.ie8 .block ul,
+.ie8 div.admin,
+.ie8 tr.even,
+.ie8 tr.odd,
+.ie8 tr.drag,
+.ie8 tbody,
+.ie8 tbody th,
+.ie8 thead th,
+.ie8 .breadcrumb,
+.ie8 .item-list .icon,
+.ie8 .item-list .title,
+.ie8 .item-list ul,
+.ie8 .item-list ul li,
+.ie8 ol.task-list li.active,
+.ie8 .form-item,
+.ie8 tr.odd .form-item,
+.ie8 tr.even .form-item,
+.ie8 .form-item .description,
+.ie8 .form-item label,
+.ie8 .form-item label.option,
+.ie8 .form-checkboxes,
+.ie8 .form-radios,
+.ie8 .form-checkboxes .form-item,
+.ie8 .form-radios .form-item,
+.ie8 .marker,
+.ie8 .form-required,
+.ie8 .more-link,
+.ie8 .more-help-link,
+.ie8 .item-list .pager,
+.ie8 .item-list .pager li,
+.ie8 .pager-current,
+.ie8 .tips,
+.ie8 ul.primary,
+.ie8 ul.primary li,
+.ie8 ul.primary li a,
+.ie8 ul.primary li.active a,
+.ie8 ul.primary li a:hover,
+.ie8 ul.secondary,
+.ie8 ul.secondary li,
+.ie8 ul.secondary a,
+.ie8 ul.secondary a.active,
+.ie8 .resizable-textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* line 132, ../sass/_reset.scss */
+.ie8 ul.links,
+.ie8 ul.links.inline,
+.ie8 ul.links li,
+.ie8 .block ul,
+.ie8 ol,
+.ie8 ul,
+.ie8 .item-list ul,
+.ie8 .item-list ul li {
+  list-style: none;
+}
+/* line 136, ../sass/_reset.scss */
+.ie8 blockquote,
+.ie8 q {
+  quotes: none;
+}
+/* line 142, ../sass/_reset.scss */
+.ie8 blockquote:before,
+.ie8 blockquote:after,
+.ie8 q:before,
+.ie8 q:after {
+  content: '';
+  content: none;
+}
+/* line 148, ../sass/_reset.scss */
+.ie8 ins {
+  text-decoration: none;
+}
+/* line 151, ../sass/_reset.scss */
+.ie8 del {
+  text-decoration: line-through;
+}
+/* line 156, ../sass/_reset.scss */
+.ie8 table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* line 169, ../sass/_reset.scss */
+.ie8 input,
+.ie8 select,
+.ie8 textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 172, ../sass/_reset.scss */
+.ie8 textarea {
+  font-size: 1em;
+  line-height: 1.538em;
+}
+/* line 185, ../sass/_reset.scss */
+.ie8 ul.links:after,
+.ie8 div.admin-panel .body:after,
+.ie8 .clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 194, ../sass/_reset.scss */
+.ie8 ul.inline:after {
+  content: "";
+  display: none;
+  clear: none;
+}
+/* line 203, ../sass/_reset.scss */
+.ie8 * html .form-item,
+.ie8 * html ul.links,
+.ie8 * html div.admin-panel .body,
+.ie8 * html .clearfix {
+  height: 1%;
+}
+/* line 210, ../sass/_reset.scss */
+.ie8 *:first-child + html .form-item,
+.ie8 *:first-child + html ul.links,
+.ie8 *:first-child + html div.admin-panel .body,
+.ie8 *:first-child + html .clearfix {
+  min-height: 1%;
+}
+/* line 214, ../sass/_reset.scss */
+.ie8 em {
+  font-style: italic;
+}
+/* line 10, ../sass/_vars.scss */
+.ie8 .shadow {
+  -webkit-box-shadow: 0px 0px 5px 0px #444444;
+  -moz-box-shadow: 0px 0px 5px 0px #444444;
+  box-shadow: 0px 0px 5px 0px #444444;
+}
+/* line 1, ../sass/_delete.scss */
+.ie8 .desktop-only {
+  display: none;
+}
+/* line 12, ../sass/_base.scss */
+.ie8 * {
+  -webkit-font-smoothing: antialiased;
+}
+/* line 17, ../sass/_base.scss */
+.ie8 body {
+  width: 100%;
+  font-size: 100%;
+}
+/* line 26, ../sass/_base.scss */
+.ie8 header {
+  width: 100%;
+}
+/* line 28, ../sass/_base.scss */
+.ie8 header #logo-wrap {
+  background-color: #41b7fd;
+}
+/* line 31, ../sass/_base.scss */
+.ie8 header #logo-wrap #logo {
+  margin: 15px 0px 5px 10px;
+  max-width: 227px;
+  width: 80%;
+  height: auto;
+}
+/* line 38, ../sass/_base.scss */
+.ie8 header #logo-wrap #hamburger {
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  cursor: pointer;
+}
+/* line 48, ../sass/_base.scss */
+.ie8 header #logo-wrap #hamburger:active > div {
+  background-color: #444444;
+}
+/* line 54, ../sass/_base.scss */
+.ie8 header #logo-wrap #hamburger > div {
+  background-color: white;
+  height: 20%;
+  width: 100%;
+}
+/* line 59, ../sass/_base.scss */
+.ie8 header #logo-wrap #hamburger > div:not(:first-child) {
+  margin-top: 20%;
+}
+/* line 66, ../sass/_base.scss */
+.ie8 header #mainnav {
+  background-color: white;
+  text-align: center;
+}
+/* line 70, ../sass/_base.scss */
+.ie8 header #mainnav > ul {
+  -webkit-transition: max-height 0.9s ease-in-out;
+  -moz-transition: max-height 0.9s ease-in-out;
+  -ms-transition: max-height 0.9s ease-in-out;
+  -o-transition: max-height 0.9s ease-in-out;
+  transition: max-height 0.9s ease-in-out;
+  height: auto;
+  max-height: 0px;
+  overflow-y: hidden;
+}
+/* line 76, ../sass/_base.scss */
+.ie8 header #mainnav > ul.active {
+  max-height: 500px;
+}
+/* line 82, ../sass/_base.scss */
+.ie8 header #mainnav li:first-child {
+  margin-top: 15px;
+}
+/* line 86, ../sass/_base.scss */
+.ie8 header #mainnav li:last-child {
+  margin-bottom: 15px;
+}
+/* line 91, ../sass/_base.scss */
+.ie8 header #mainnav a, .ie8 header #mainnav a:visited, .ie8 header #mainnav a:active, .ie8 header #mainnav a:link {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #41b7fd;
+  font-size: 1.6em;
+  font-style: italic;
+  font: "archivo_narrowitalic", Helvetica, Arial, sans-serif;
+  line-height: 45px;
+  text-decoration: none;
+}
+/* line 98, ../sass/_base.scss */
+.ie8 header #mainnav a:hover, .ie8 header #mainnav a:visited:hover, .ie8 header #mainnav a:active:hover, .ie8 header #mainnav a:link:hover {
+  color: #444444;
+}
+/* line 108, ../sass/_base.scss */
+.ie8 #main {
+  width: 100%;
+  position: relative;
+  /*********
+  * PERKS
+  *******/
+  /*********
+  * POSTS
+  *******/
+  /*********
+  * SIDEBAR
+  *******/
+}
+/* line 112, ../sass/_base.scss */
+.ie8 #main #main-text {
+  position: absolute;
+  top: 0px;
+  left: 5%;
+  right: 5%;
+}
+/* line 118, ../sass/_base.scss */
+.ie8 #main #main-text p {
+  font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 1em;
+  margin: 0px auto;
+  text-align: center;
+  line-height: 1.1em;
+  padding: 0px 5px;
+  width: 100%;
+  max-width: 320px;
+}
+/* line 128, ../sass/_base.scss */
+.ie8 #main #main-text h1 {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  margin: 25px auto;
+  padding-top: 20px;
+}
+/* line 135, ../sass/_base.scss */
+.ie8 #main #inner-main {
+  width: 100%;
+  overflow-x: hidden;
+}
+/* line 139, ../sass/_base.scss */
+.ie8 #main #inner-main img {
+  width: 100%;
+  height: auto;
+  min-width: 450px;
+  background: rgba(39, 62, 84, 0.82);
+  z-index: 2;
+}
+/* line 147, ../sass/_base.scss */
+.ie8 #main #inner-main #joinbutton {
+  height: 150px;
+  width: 150px;
+  margin-top: -75px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  margin-bottom: 5px;
+}
+/* line 158, ../sass/_base.scss */
+.ie8 #main #inner-main #joinbutton h2 {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #41b7fd;
+  font-size: 1.9em;
+  line-height: 26px;
+  text-align: center;
+  padding-top: 50px;
+}
+/* line 167, ../sass/_base.scss */
+.ie8 #main #inner-main .shadow {
+  -webkit-box-shadow: 0px 0px 12px -1px #444444;
+  box-shadow: 0px 0px 12px -1px #444444;
+}
+/* line 177, ../sass/_base.scss */
+.ie8 #main .perksection {
+  display: block;
+  height: auto;
+  width: 90%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 185, ../sass/_base.scss */
+.ie8 #main .perksection .perk1, .ie8 #main .perksection .perk2, .ie8 #main .perksection .perk3, .ie8 #main .perksection img {
+  display: block;
+  margin: 25px auto;
+}
+/* line 191, ../sass/_base.scss */
+.ie8 #main .perksection h2 {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #41b7fd;
+  font-size: 1.2em;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+/* line 198, ../sass/_base.scss */
+.ie8 #main .perksection p {
+  font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
+  color: #444444;
+  font-size: 0.9em;
+  display: block;
+  margin: 0px auto;
+  line-height: 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+}
+/* line 209, ../sass/_base.scss */
+.ie8 #main hr {
+  height: 2px;
+  background-color: #41b7fd;
+  margin: 25px;
+}
+/* line 215, ../sass/_base.scss */
+.ie8 #main .events {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #41b7fd;
+  font-size: 2em;
+  margin: 10px auto;
+  text-align: center;
+}
+/* line 225, ../sass/_base.scss */
+.ie8 #main article {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+/* line 230, ../sass/_base.scss */
+.ie8 #main article .date {
+  display: block;
+  height: 75px;
+  width: 75px;
+  margin: 25px auto;
+  border-radius: 50%;
+  background-color: #41b7fd;
+}
+/* line 238, ../sass/_base.scss */
+.ie8 #main article .date p {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 1.5em;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 25px;
+  padding-top: 15px;
+  margin: 0px auto;
+}
+/* line 250, ../sass/_base.scss */
+.ie8 #main article h3 {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #444444;
+  font-size: 1.25em;
+  margin: 10px 0px;
+  text-align: center;
+}
+/* line 257, ../sass/_base.scss */
+.ie8 #main article .post-text {
+  font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
+  color: #444444;
+  font-size: 1em;
+  text-align: center;
+  line-height: 1.3em;
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 267, ../sass/_base.scss */
+.ie8 #main article .more a, .ie8 #main article a:visited, .ie8 #main article a:active, .ie8 #main article a:link {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: #41b7fd;
+  font-size: 1em;
+  font-style: italic;
+  font: "archivo_narrowitalic", Helvetica, Arial, sans-serif;
+  text-decoration: underline;
+  text-align: center;
+  margin: 10px auto;
+  display: block;
+}
+/* line 276, ../sass/_base.scss */
+.ie8 #main article .more a:hover, .ie8 #main article a:visited:hover, .ie8 #main article a:active:hover, .ie8 #main article a:link:hover {
+  color: navy;
+}
+/* line 286, ../sass/_base.scss */
+.ie8 #main aside {
+  background-color: #0776b8;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}
+/* line 292, ../sass/_base.scss */
+.ie8 #main aside .sidebar-header {
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 1.5em;
+  margin: 5px auto;
+  text-align: center;
+  display: block;
+}
+/* line 299, ../sass/_base.scss */
+.ie8 #main aside .sidebar-content {
+  width: 100%;
+}
+/* line 302, ../sass/_base.scss */
+.ie8 #main aside .sidebar-content .sidebar-pic {
+  width: 90%;
+  height: auto;
+  margin: 1px auto;
+}
+/* line 308, ../sass/_base.scss */
+.ie8 #main aside .sidebar-content ul {
+  display: block;
+  text-align: center;
+}
+/* line 313, ../sass/_base.scss */
+.ie8 #main aside .sidebar-content ul img {
+  width: 40px;
+  height: auto;
+  padding: 20px;
+}
+/* line 319, ../sass/_base.scss */
+.ie8 #main aside .sidebar-content ul li {
+  display: inline-block;
+  list-style: none;
+}
+/* line 324, ../sass/_base.scss */
+.ie8 #main aside .sidebar-content ul a, .ie8 #main aside .sidebar-content ul a:visited, .ie8 #main aside .sidebar-content ul a:active, .ie8 #main aside .sidebar-content ul a:link {
+  color: white;
+  font-size: 0em;
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  line-height: 20px;
+  text-decoration: none;
+}
+/* line 332, ../sass/_base.scss */
+.ie8 #main aside .sidebar-content ul a:hover, .ie8 #main aside .sidebar-content ul a:visited:hover, .ie8 #main aside .sidebar-content ul a:active:hover, .ie8 #main aside .sidebar-content ul a:link:hover {
+  text-decoration: none;
+  color: #444444;
+}
+/* line 346, ../sass/_base.scss */
+.ie8 .footer-hr {
+  height: 2px;
+  background-color: white;
+  margin: 0px;
+}
+/* line 352, ../sass/_base.scss */
+.ie8 footer {
+  background-color: #41b7fd;
+  height: auto;
+  margin: 0px auto;
+  text-align: center;
+  width: 100%;
+}
+/* line 359, ../sass/_base.scss */
+.ie8 footer .footernav {
+  color: white;
+  font: "archivo_narrowbold", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+/* line 365, ../sass/_base.scss */
+.ie8 footer .footernav li:first-child {
+  padding-top: 15px;
+}
+/* line 370, ../sass/_base.scss */
+.ie8 footer .footernav a, .ie8 footer .footernav a:visited, .ie8 footer .footernav a:active, .ie8 footer .footernav a:link, .ie8 footer .footernav a:hover {
+  font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 1.3em;
+  line-height: 40px;
+  text-decoration: none;
+}
+/* line 378, ../sass/_base.scss */
+.ie8 footer p {
+  font: "archivo_narrowregular", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 0.5em;
+  bottom: 0px;
+  padding: 10px 0px;
+  position: relative;
+  right: 0px;
+}

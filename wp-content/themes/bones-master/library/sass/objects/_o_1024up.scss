@@ -1,0 +1,159 @@
+/************
+ *Defaults
+ ********/
+
+
+@import "_o_all";
+
+/****
+ *Widths
+ */
+
+
+/*One Base*/
+%one-one {
+ 	width: 100%;
+ 	display: inline-block;
+}
+
+/*Two Base*/
+%one-two {
+ 	width: 50%;
+ 	display: inline-block;
+}
+
+/*Three Base*/
+%one-three {
+ 	width: 33.3333%;
+ 	display: inline-block;
+}
+%two-three {
+ 	width: 66.6666%;
+ 	display: inline-block;
+}
+
+/*Four Base*/
+%one-four {
+ 	width: 25%;
+ 	display: inline-block;
+}
+%three-four {
+ 	width: 75%;
+ 	display: inline-block;
+}
+
+/*Five Base*/
+%one-five {
+ 	width: 20%;
+ 	display: inline-block;
+}
+%two-five {
+ 	width: 40%;
+ 	display: inline-block;
+}
+%three-five {
+ 	width: 60%;
+ 	display: inline-block;
+}
+%four-five {
+ 	width: 80%;
+ 	display: inline-block;
+}
+
+/*Six Base*/
+%one-six {
+ 	width: 16.6666%;
+ 	display: inline-block;
+}
+%five-six {
+ 	width: 83.3333%;
+ 	display: inline-block;
+}
+
+/*Seven Base*/
+%one-seven {
+ 	width: 14.2857%;
+ 	display: inline-block;
+}
+%two-seven {
+ 	width: 28.5714%;
+ 	display: inline-block;
+}
+%three-seven {
+ 	width: 42.8571%;
+ 	display: inline-block;
+}
+%four-seven {
+ 	width: 57.1428%;
+ 	display: inline-block;
+}
+%five-seven {
+ 	width: 71.4285%;
+ 	display: inline-block;
+}
+%six-seven {
+ 	width: 85.7142%;
+ 	display: inline-block;
+}
+
+/*Eight Base*/
+%one-eight {
+ 	width: 12.5%;
+ 	display: inline-block;
+}
+%three-eight {
+ 	width: 37.5%;
+ 	display: inline-block;
+}
+%five-eight {
+ 	width: 62.5%;
+ 	display: inline-block;
+}
+%seven-eight {
+ 	width: 87.5%;
+ 	display: inline-block;
+}
+
+/*Nine Base*/
+%one-nine {
+ 	width: 11.1111%;
+ 	display: inline-block;
+}
+%two-nine {
+ 	width: 22.2222%;
+ 	display: inline-block;
+}
+%four-nine {
+ 	width: 44.4444%;
+ 	display: inline-block;
+}
+%five-nine {
+	width: 55.5555%;
+	display: inline-block;
+}
+%seven-nine {
+	width: 77.7777%;
+	display: inline-block;
+}
+%eight-nine {
+	width: 88.8888%;
+	display: inline-block;
+}
+
+/*Ten Base*/
+%one-ten {
+ 	width: 10%;
+ 	display: inline-block;
+}
+%three-ten {
+	width: 30%;
+ 	display: inline-block;
+}
+%seven-ten {
+	width: 70%;
+	display: inline-block;
+}
+%nine-ten {
+	width: 90%;
+	display: block;
+}

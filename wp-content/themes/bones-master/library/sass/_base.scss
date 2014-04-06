@@ -1,0 +1,390 @@
+/************
+ *Objects & Functions
+ ********/
+
+
+@import "objects/_o_base";
+
+/*************
+* Outer Containers
+**********/
+
+* {
+	-webkit-font-smoothing: antialiased;
+}
+
+
+body{
+	width: 100%;
+	font-size: 100%;
+}
+
+
+/*********
+* Header
+*******/
+	header {
+		width: 100%;
+		#logo-wrap {
+			background-color: $azure;
+
+			#logo {
+				margin: 15px 0px 5px 10px;
+				max-width: 227px;
+				width: 80%;
+				height: auto;
+			}
+
+			#hamburger {
+				display: inline-block;
+				width: 25px;
+				height: 20px;
+				position: absolute;
+				top: 20px;
+				right: 15px;
+				cursor: pointer;
+
+				&:active {
+					&>div{
+						background-color: $black;
+					}
+				}
+
+
+				&>div{
+					background-color: $hamburgercolor;
+					height: 20%;
+					width: 100%;
+
+					&:not(:first-child) {
+						margin-top: 20%;
+					}
+				}
+			}
+
+		}
+		#mainnav {
+			background-color: $white;
+			text-align: center;
+
+			& > ul {
+				@include transition(.9, max-height);
+				height: auto;
+				max-height: 0px;
+				overflow-y: hidden;
+
+				&.active {
+					max-height: 500px;
+				}
+			}
+
+			li{
+				&:first-child {
+					margin-top: 15px;
+				}
+
+				&:last-child{
+					margin-bottom: 15px;
+				}
+			}
+
+			a, a:visited, a:active, a:link {
+				@include blue_header(1.6em);
+				font-style: italic;
+				font: $italictext;
+				line-height: 45px; 
+				text-decoration: none;
+			
+				&:hover {
+					color: $black;
+				}
+			}
+		}
+	}
+
+/*********
+* Middle
+*******/
+	#main {
+		width: 100%;
+		position: relative;
+
+		#main-text {
+			position: absolute;
+			top: 0px;
+			left: 5%;
+			right: 5%;
+			
+			p{
+				@include white_body(1em);
+				margin: 0px auto;
+				text-align: center;
+				line-height: 1.1em;
+				padding: 0px 5px;
+				width: 100%;
+				max-width: 320px;
+			}
+
+			h1 {
+				@include white_header (2em);
+				text-align: center;
+				margin: 25px auto;
+				padding-top: 20px;
+			}
+		}
+		#inner-main{
+			width: 100%;
+			overflow-x: hidden;
+
+			img {
+				width: 100%;
+				height: auto;
+				min-width: 450px;
+				background: rgba(39,62,84,0.82);
+				z-index: 2;
+			}
+
+			#joinbutton {
+				height: 150px;
+				width: 150px;
+				margin-top: -75px;
+				margin-left: auto;
+				margin-right: auto;
+				border-radius: 50%;
+				background-color: $white;
+				position: relative;
+				margin-bottom: 5px;
+					
+					h2 {
+						@include blue_header(1.9em);
+						line-height: 26px;
+						text-align: center;
+						padding-top: 50px;
+						
+					}
+			}
+
+			.shadow {
+			  -webkit-box-shadow: 0px 0px 12px -1px $black;
+			  box-shadow: 0px 0px 12px -1px $black; 
+			}
+
+ 		}
+
+/*********
+* PERKS
+*******/
+		.perksection {
+			display: block;
+			height: auto;
+			width: 90%;
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+
+				.perk1, .perk2, .perk3, img {
+					display: block;
+					margin: 25px auto;
+
+				}
+
+				h2{
+					@include blue_header(1.2em);
+					line-height: 20px;
+					text-align: center;
+					margin-bottom: 5px;
+				}
+
+				p{
+					@include black_body(.9em);
+					display: block;
+					margin: 0px auto;
+					line-height: 16px;
+					text-align: center;	
+					width: 100%;
+					max-width: 320px;
+				}
+		}
+
+		hr {
+			height: 2px;
+			background-color: $azure;
+			margin: 25px;
+		}
+
+		.events {
+			@include blue_header(2em);
+			margin: 10px auto;
+			text-align: center;
+		}
+
+
+/*********
+* POSTS
+*******/
+		article{
+			width: 90%;
+			@include margin-auto();
+			display: block;
+
+			.date {
+				display: block;
+				height: 75px;
+				width: 75px;
+				margin: 25px auto;
+				border-radius: 50%;
+				background-color: $azure;
+				
+				p {
+					@include white_header(1.5em);
+					display: block;
+					text-transform: uppercase;
+					text-align: center;
+					line-height: 25px;
+					padding-top: 15px;
+					margin: 0px auto;
+
+				}
+			}
+
+			h3 {
+					@include black_header(1.25em);
+					margin: 10px 0px;
+					text-align: center;
+
+				}
+			
+			.post-text {
+					@include black_body(1em);
+					text-align: center;
+					line-height: 1.3em;
+					width: 100%;
+					max-width: 320px;
+					display: block;
+					@include margin-auto();
+			}
+
+			.more a, a:visited, a:active, a:link {
+				@include blue_header(1em);
+				font-style: italic;
+				font: $italictext;
+				text-decoration: underline; 
+				text-align: center;
+				margin: 10px auto;
+				display: block;
+
+				&:hover {
+					color: navy;
+				}
+			}
+		}
+
+
+/*********
+* SIDEBAR
+*******/
+		aside {
+			background-color: $dkblue;
+			width: 100%;
+			height: auto;
+			padding: 5px;
+
+			.sidebar-header {
+				@include white_header(1.5em);
+				margin: 5px auto;
+				text-align: center;
+				display: block;
+			}
+
+			.sidebar-content {
+				width: 100%;
+
+				.sidebar-pic {
+					width: 90%;
+					height: auto;
+					margin: 1px auto;
+				}
+
+				ul{
+					display: block;
+					text-align: center;
+
+
+					img{
+						width: 40px;
+						height: auto;
+						padding: 20px
+					}
+
+					li {
+						display: inline-block;
+						list-style: none;
+					}
+
+					a, a:visited, a:active, a:link{
+						color: $white;
+						font-size: 0em;
+						font: $headertext;
+						line-height: 20px; 
+						text-decoration: none;
+
+						
+						&:hover {
+							text-decoration: none;
+							color: $black;
+						}
+					}
+				}
+			}
+		}
+	}
+
+/*********
+* Footer
+*******/
+
+	.footer-hr {
+		height: 2px;
+		background-color: $white;
+		margin: 0px
+	}
+
+	footer{
+		background-color: $azure;
+		height: auto;
+		margin: 0px auto;
+		text-align: center;
+		width: 100%;
+	
+		.footernav {
+			color: $white;
+			font: $headertext;
+			text-align: center;
+
+
+			li:first-child {
+				padding-top: 15px;
+			}
+
+			
+			a, a:visited, a:active, a:link, a:hover {
+				@include white_body(1.3em);
+ 				line-height: 40px;
+				text-decoration: none;
+				
+			}
+		}
+
+		p {
+			@include white_body(.5em);
+			bottom: 0px;
+			padding: 10px 0px;
+			position: relative;
+			right: 0px;
+
+		}
+
+
+	}
+
+
